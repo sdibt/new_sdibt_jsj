@@ -1,0 +1,108 @@
+[ 2015-09-30T17:55:21+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/3_9afebaee12.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:55:21+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/1_946d86971f.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:55:21+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/2_bb3e1c0d16.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:55:21+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/4_84bd98d167.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:58:39+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/3_9afebaee12.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:58:39+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/2_bb3e1c0d16.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:58:39+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/1_946d86971f.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:58:39+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/4_84bd98d167.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:58:41+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/3_9afebaee12.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:58:42+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/2_bb3e1c0d16.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:58:42+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/4_84bd98d167.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T17:58:42+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/1_946d86971f.jpg
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T18:04:46+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showNav?type_id=1&news_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+ERR: 无法加载模块:ShowNav
+
+[ 2015-09-30T18:05:38+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showNav/?type_id=1&news_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000927s ]
+ERR: 无法加载模块:ShowNav
+
+[ 2015-09-30T18:05:47+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showNav?type_id=1&news_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+ERR: 无法加载模块:ShowNav
+
+[ 2015-09-30T18:06:11+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/3_9afebaee12.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000839s ]
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T18:06:11+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/4_84bd98d167.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T18:06:11+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/2_bb3e1c0d16.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000930s ]
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T18:06:11+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/1_946d86971f.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T18:06:26+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/2_bb3e1c0d16.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T18:06:26+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/1_946d86971f.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000878s ]
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T18:06:26+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/3_9afebaee12.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000860s ]
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T18:06:26+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showimage/4_84bd98d167.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001138s ]
+ERR: 无法加载模块:Showimage
+
+[ 2015-09-30T18:12:32+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/showNav?type_id=1&news_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+ERR: 无法加载模块:ShowNav
+

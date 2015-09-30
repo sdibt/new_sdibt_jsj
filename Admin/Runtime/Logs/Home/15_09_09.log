@@ -1,0 +1,75 @@
+[ 2015-09-09T18:02:32+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001117s ]
+
+[ 2015-09-09T18:04:15+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+
+[ 2015-09-09T18:04:17+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001003s ]
+
+[ 2015-09-09T18:04:19+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+
+[ 2015-09-09T18:04:19+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+
+[ 2015-09-09T18:04:20+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+
+[ 2015-09-09T18:04:20+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+
+[ 2015-09-09T18:04:23+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+
+[ 2015-09-09T22:13:53+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+
+[ 2015-09-09T22:40:03+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+
+[ 2015-09-09T22:40:05+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+
+[ 2015-09-09T22:40:05+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+
+[ 2015-09-09T22:40:14+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+
+[ 2015-09-09T22:40:24+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+
+[ 2015-09-09T22:40:25+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+

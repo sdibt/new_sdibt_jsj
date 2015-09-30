@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+<head >
+<title>山东工商学院计算机科学与技术学院</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="__PUBLIC__/styles1/3_column.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/styles1/layout.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/styles1/xiala.css" type="text/css" />
+<!-- <css href="__PUBLIC__/Css/page.css" /> -->
+<!-- Homepage Specific Elements -->
+<script type="text/javascript" src="__PUBLIC__/scripts1/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/scripts1/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="__PUBLIC__/scripts1/jquery.timers.1.2.js"></script>
+<script type="text/javascript" src="__PUBLIC__/scripts1/jquery.galleryview.2.1.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/scripts1/jquery.galleryview.setup.js"></script>
+<!-- End Homepage Specific Elements -->
+
+</head>
+<body id="top">
+<div class="wrapper row1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <img src="__PUBLIC__/image/logo2.png" alt="" style = "width:80px;height:80px;margin:10px 0 0 0"/>
+    	<img src="__PUBLIC__/image/jsjlogo.png" alt=""  style = "width:600px;height:80px;margin:0 0 0 -10px"/>
+    </div>
+    <div class="fl_right">
+      <form action="__APP__/Home/Search/showSearch" method="post" id="sitesearch">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" name ="val" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="image" src="__PUBLIC__/images1/search.gif" id="search" alt="Search" />
+        </fieldset>
+      </form>
+    </div>
+    <div id="topnav" class = "menu">  
+      <ul >
+        <li class="active"><a href="__APP__">首页</a></li>
+        	<volist name="result" id="res">
+		        <li><a href="__APP__/Home/Navigation/showNav/?type_id={$res['news_id']}&news_id=1">{$res['title']}</a>
+		        <ul>
+		        	<volist name="result1[$res['news_id']]" id="res1">
+					   	<li><a href="__APP__/Home/Navigation/showNav?type_id={$res['news_id']}&news_id={$res1['news_id']}" >{$res1['title']}</a></li>
+					</volist>  
+		         </ul>
+		         </li>
+		     </volist>
+      </ul>
+    </div>
+  </div>
+</div>

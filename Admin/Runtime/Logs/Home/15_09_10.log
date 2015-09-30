@@ -1,0 +1,15 @@
+[ 2015-09-10T10:13:21+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+
+[ 2015-09-10T10:13:22+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+
+[ 2015-09-10T10:13:23+08:00 ] 127.0.0.1 /sdibt_jsj/admin.php/Home/Admin/change.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+

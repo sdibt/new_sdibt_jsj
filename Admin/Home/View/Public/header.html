@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>后台管理系统</title>
+
+
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/ueditor.all.min.js"> </script>
+<js file="__PUBLIC__/scripts/bootstrap.js" />
+<js file="__PUBLIC__/scripts/jquery-2.1.4.min.js" />
+<js file="__PUBLIC__/My97DatePicker/WdatePicker.js" />
+
+
+
+<css file="__PUBLIC__/Css/backstage.css" />
+<!-- <css file="__PUBLIC__/Css/bootstrap.min.css" /> -->
+<css href="__PUBLIC__/Css/page.css" />
+<css href="__PUBLIC__/Css/style.css" />
+
+
+
+</head>
+
+<body>
+    <div class="head">
+            <div class="logo fl"><a href="#"></a></div>
+            <h2 class="head_text fr" style="margin:0 0 10px 0">计算机科学与技术学院后台管理系统</h2>
+    </div>
+    <div class="operation_user clearfix">
+        <div class="link fl">
+        <a href="{:U('Home/Admin/index')}"><b>计科院</b></a>
+        <span style="color:#000">&gt;&gt;</span>欢迎你: <?php echo $_SESSION['username']?>&nbsp;&nbsp;&nbsp;</div>
+        <div> <a href="{:U('Home/Manager/out')}"><b >退出</b></a>
+             <a href="__ROOT__/index.php" target="_Blank" style="float:right;margin:-5px -320px 0 0;font-size:15px;color:#000">学院首页&raquo;</a>
+        </div>
+    </div>

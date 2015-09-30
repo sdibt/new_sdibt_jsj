@@ -1,0 +1,68 @@
+<include file="Public:header" />
+
+<div class="wrapper row3">
+  <div id="hpage_featured" class="clear">
+   
+    <div id="featured_slide">
+      <ul>
+        <volist name = "pic" id = "showpic">
+        	<li><img src="{$showpic['pic_url']}" alt="" />
+	          <div class="panel-overlay">
+	            <h2>{$showpic['title']}</h2>
+	            <p>{$showpic['content']}</p>
+	          </div>
+       	    </li>
+        </volist>
+      </ul>
+    </div>
+    <!-- ###### -->
+    <div class="intro clear">
+    
+       <!-- <div class="welcome clear"><img class="imgl" src="__PUBLIC__/images1/5.png" alt="" />    
+          <h2 style="font-style:normal;float:left; width:283px"><b>欢迎来到计算机科学与技术学院</b></h2>
+          <p>计算机科学与技术学院属于山东工商学院的二级学院，现有计算机科学与技术、数字媒体技术、通信工程、网络工程4个本科专业，在校本科生923人。</p>
+      </div>  -->
+      <div class="popular"><br/><br/><br/>
+        <h2 style="font-style:normal">&raquo;<b>学院新闻</b>
+          <a href="__APP__/Home/HomePage/showPage?type_id=1">
+          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 280px"/>
+          </a></h2>
+          <hr></hr>
+          <ul>
+          <volist name="result2" id ="Res">
+	            <li>
+	              <p><a href="__APP__/Home/HomePage/showPageContent?type_id={$Res['type_id']}&news_id={$Res['news_id']}">{$Res['title']|substr=0,36}</a><span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
+	            </li>
+		  </volist>	
+ 
+          </ul>
+      </div>
+    </div>
+  </div>
+	<div id="container" class="clear">
+    
+    <div id="homepage" class="clear">
+      <!-- ###### -->
+      <div id="content">   
+      <volist name="result4" id ="res">
+        <div id="quicklinks" >
+	          <h2 style="font-style:normal">&raquo;<b>{$res['title']}</b>
+	          <a href="__APP__/Home/HomePage/showPage?type_id={$res['news_id']}">
+	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 278px;"/></a></h2>
+	          <ul>
+	          <volist name="result3[$res['news_id']]" id ="Res">
+	            <li>
+	              <p><a href="__APP__/Home/HomePage/showPageContent?type_id={$Res['type_id']}&news_id={$Res['news_id']}">{$Res['title']|substr=0,36}</a><span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
+	            </li>
+			  </volist>	
+	          </ul>
+	          
+        </div>
+	  </volist>
+    </div>
+   </div>
+  </div>
+</div>
+
+
+<include file="Public:footer" />

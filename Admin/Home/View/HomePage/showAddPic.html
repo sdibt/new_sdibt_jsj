@@ -1,0 +1,42 @@
+<include file="Public:header" />
+    <div class="content clearfix" style="height:660px">
+        <div class="main">
+            <!--右侧内容-->
+            <div class="cont">
+                <div class="title">幻灯片的添加&raquo;</div>
+                <div class="details">
+                    <div class="details_operation clearfix">
+                        <div class="bui_select">
+                            <a href="{:U('Home/HomePage/showAddPic')}">
+                            <input type="button" value="添     加" class="add"></a>
+                        </div>
+                    </div>
+                    <!--表格-->
+              <section class="column width6 first" style="margin-left:200px;">					
+					<h3>Add new Picture</h3>	
+					<form id="sampleform" enctype="multipart/form-data" method="post" action="{:U('Home/HomePage/addPic')}">
+						<fieldset>
+							<legend>Picture info</legend>
+							<p>
+								<label class="required" for="title">标题</label><br/>
+								<input type="text"  class="title1" value="" name="texttitle" style="height:20px;color:#000"/>
+								<small>ACM</small>
+							</p>
+							<p>
+								<label class="required" for="title">图片描述</label><br/>
+								<input type="text"  class="title1" value="" name="textcontent" style="height:20px;width:240px;color:#000"/>
+								<small>ACM程序设计大赛</small>
+							</p>
+							<p>
+								<label class="required" for="title">选择上传的图片</label><br/>
+								<input type="file" name="myFile">
+							</p>		
+							<p class="box"><input type="submit" class="btn btn-green big" value="Save"/> or 
+										    <input type="reset" class="btn btn-green big" value="resetting"/></p>
+						</fieldset>
+					</form>
+				</section>   		     
+                </div>
+            </div>
+        </div>
+ <include file="Public:footer" />       

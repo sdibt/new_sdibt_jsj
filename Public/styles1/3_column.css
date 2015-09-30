@@ -1,0 +1,57 @@
+
+
+#container #content{
+	display:block;
+	float:left;
+	width:960px;
+	overflow:hidden;
+	}
+#content img{
+	
+}
+/* ----------------------------------------------Generalise-------------------------------------*/
+
+#container #left_column .holder, #container #right_column .holder{
+	display:block;
+	width:220px;
+	height:500px;
+	margin:20px 30px 20px 30px;
+	}
+
+#container #left_column .imgholder, #container #right_column .imgholder{
+	display:block;
+	margin-bottom:10px;
+	}
+
+#container #left_column .nostart li, #container #right_column .nostart li{
+	margin-bottom:8px;
+	}
+
+#container #left_column .last, #container #right_column .last{
+	margin-bottom:0;
+	}
+
+/* ----------------------------------------------Left Column-------------------------------------*/
+
+#container #left_column{
+	display:block;
+	float:left;
+	width:200px;
+	}
+
+#container #left_column .imgholder{
+	width:190px;
+	}
+
+/* ----------------------------------------------Right Column-------------------------------------*/
+
+#container #right_column{
+	display:block;
+	float:right;
+	width:250px;
+	}
+
+#container #right_column .imgholder{
+	width:240px;
+	}
+	

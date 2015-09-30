@@ -1,0 +1,21 @@
+[ 2015-09-10T13:31:46+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/Ceshi/show
+ERR: 无法加载模块:Ceshi
+
+[ 2015-09-10T13:39:28+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/asdf/show
+ERR: 无法加载模块:Asdf
+
+[ 2015-09-10T13:39:47+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/Asdf/show
+ERR: 无法加载模块:Asdf
+
+[ 2015-09-10T13:40:03+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/Zhaopeng/show
+ERR: 无法加载模块:Zhaopeng
+
+[ 2015-09-10T13:40:48+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/Zhaopeng
+ERR: 无法加载模块:Zhaopeng
+
+[ 2015-09-10T13:40:52+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/Zhaopeng
+ERR: 无法加载模块:Zhaopeng
+
+[ 2015-09-10T13:41:09+08:00 ] 127.0.0.1 /sdibt_jsj/index.php/Zhaopeng/show
+ERR: 无法加载模块:Zhaopeng
+
