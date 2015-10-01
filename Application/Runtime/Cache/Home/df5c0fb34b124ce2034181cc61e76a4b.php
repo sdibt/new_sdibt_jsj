@@ -25,7 +25,7 @@
     	<img src="/sdibt_jsj/Public/image/jsjlogo.png" alt=""  style = "width:600px;height:80px;margin:0 0 0 -10px"/>
     </div>
     <div class="fl_right">
-      <form action="/sdibt_jsj/index.php/Home/Search/showSearch" method="post" id="sitesearch">
+      <form action="/sdibt_jsj/Home/Search/showSearch" method="post" id="sitesearch">
         <fieldset>
           <legend>Site Search</legend>
           <input type="text" name ="val" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
@@ -35,10 +35,10 @@
     </div>
     <div id="topnav" class = "menu">  
       <ul >
-        <li class="active"><a href="/sdibt_jsj/index.php">首页</a></li>
-        	<?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/index.php/Home/Navigation/showNav/?type_id=<?php echo ($res['news_id']); ?>&news_id=1"><?php echo ($res['title']); ?></a>
+        <li class="active"><a href="/sdibt_jsj">首页</a></li>
+        	<?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/nav/?type_id=<?php echo ($res['news_id']); ?>&news_id=1"><?php echo ($res['title']); ?></a>
 		        <ul>
-		        	<?php if(is_array($result1[$res['news_id']])): $i = 0; $__LIST__ = $result1[$res['news_id']];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res1): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/index.php/Home/Navigation/showNav?type_id=<?php echo ($res['news_id']); ?>&news_id=<?php echo ($res1['news_id']); ?>" ><?php echo ($res1['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>  
+		        	<?php if(is_array($result1[$res['news_id']])): $i = 0; $__LIST__ = $result1[$res['news_id']];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res1): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/nav/?type_id=<?php echo ($res['news_id']); ?>&news_id=<?php echo ($res1['news_id']); ?>" ><?php echo ($res1['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>  
 		         </ul>
 		         </li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
@@ -53,7 +53,7 @@
       <div class="holder" >
         <h2 class="title" style="font-style:normal"><b>学院动态&nbsp;&nbsp;&raquo;</b></h2>
         <ul class="nostart" style="margin-left:60px;font-size:16px">
-        	<?php if(is_array($PageResult)): $i = 0; $__LIST__ = $PageResult;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$Pageres): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/index.php/Home/HomePage/showPage?type_id=<?php echo ($Pageres['news_id']); ?>"><?php echo ($Pageres['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+        	<?php if(is_array($PageResult)): $i = 0; $__LIST__ = $PageResult;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$Pageres): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/page/?type_id=<?php echo ($Pageres['news_id']); ?>"><?php echo ($Pageres['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 
         </ul>
       </div>
@@ -63,7 +63,7 @@
       <h1 class="title" style="font-style:normal"><?php echo ($Type_Title); ?>&raquo;</h1>
 	      <ul class="" style="margin-left:30px;font-size:16px">
 	      	<?php if(is_array($Pagecontent)): $i = 0; $__LIST__ = $Pagecontent;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$Pagecon): $mod = ($i % 2 );++$i;?><li style="margin-top:10px;">
-	          <a href="/sdibt_jsj/index.php/Home/HomePage/showPageContent?type_id=<?php echo ($Pagecon['type_id']); ?>&news_id=<?php echo ($Pagecon['news_id']); ?>"><?php echo ($Pagecon['title']); ?>
+	          <a href="/sdibt_jsj/Home/con/?type_id=<?php echo ($Pagecon['type_id']); ?>&news_id=<?php echo ($Pagecon['news_id']); ?>"><?php echo ($Pagecon['title']); ?>
 	          <span style="float:right"><?php echo (substr($Pagecon['addtime'],0,10)); ?></span></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 	      </ul>
 	      <div style="float:right">
@@ -73,9 +73,31 @@
   </div>
 </div>
 <div class="wrapper">
-  <div id="copyright" class="clear">
-    <p class="fl_left" style="margin-left:300px">Copyright &copy; 2015   山东工商学院计算机科学与技术学院 </p>
-  &nbsp;&nbsp;&nbsp;&nbsp;<a href="/sdibt_jsj/admin.php" target="_Blank">管理员入口</a></div>
+
+  <div id="copyright" class="clear" style="width:960px;display:block;position:relative;">
+  		<div class="lists" style="width:560px;display:block;float:left;">
+        <h2 style="font-style:normal ; color:#fff">&raquo;<b>快速导航</b></h2>
+        <ul >
+          <li><a href="http://acm.sdibt.edu.cn/" target="_Blank">&raquo; ACM OnlineJudge</a></li>
+          <li><a href="http://acm.sdibt.edu.cn:8080/judge/toIndex.action" target="_Blank">&raquo; ACM VirutalJudge </a></li>
+          <li><a href="http://www.ccec.edu.cn/" target="_Blank">&raquo; 山东工商学院</a></li>
+          <li><a href="http://xd.sdibt.edu.cn/" target="_Blank">&raquo; 信电学院</a></li>
+          <li><a href="http://sx.sdibt.edu.cn/" target="_Blank">&raquo; 数学与信息科学学院</a></li>
+          <li><a href="http://career.sdibt.edu.cn/" target="_Blank">&raquo; 招生与就业处</a></li>
+          <li><a href="http://lib.sdibt.edu.cn/" target="_Blank">&raquo; 山商图书馆</a></li>
+          <li><a href="http://www.tup.com.cn/index.html" target="_Blank">&raquo; 清华大学出版社</a></li>
+        </ul>
+        </div>
+        <div style="width:400px;display:block;float:right;">
+         <p style="display:block;float:right; margin:3% 0 0 0; color:#fff">
+         	   邮政编码：264005 <br><br>
+         	   通讯地址：山东省烟台市莱山区滨海中路191号  <br><br>山东工商学院计算机科学与技术学院
+         <a href="/sdibt_jsj/admin.php" target="_Blank"><b >管理员入口</b></a><br><br>
+         	   
+  			 Copyright &copy; 2015   山东工商学院计算机科学与技术学院<br>
+		 </p>
+  		</div>
+  </div>
 </div>
 </body>
 </html>

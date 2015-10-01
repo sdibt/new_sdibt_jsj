@@ -37,10 +37,10 @@
       <ul >
         <li class="active"><a href="__APP__">首页</a></li>
         	<volist name="result" id="res">
-		        <li><a href="__APP__/Home/Navigation/showNav/?type_id={$res['news_id']}&news_id=1">{$res['title']}</a>
+		        <li><a href="__APP__/Home/nav/?type_id={$res['news_id']}&news_id=1">{$res['title']}</a>
 		        <ul>
 		        	<volist name="result1[$res['news_id']]" id="res1">
-					   	<li><a href="__APP__/Home/Navigation/showNav?type_id={$res['news_id']}&news_id={$res1['news_id']}" >{$res1['title']}</a></li>
+					   	<li><a href="__APP__/Home/nav/?type_id={$res['news_id']}&news_id={$res1['news_id']}" >{$res1['title']}</a></li>
 					</volist>  
 		         </ul>
 		         </li>

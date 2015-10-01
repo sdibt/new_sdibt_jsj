@@ -12,5 +12,5 @@ return array(
     'DB_USER'=>'root',
     'DB_PWD'=>'root',
     'DB_PREFIX'=>'',
-    
+    'URL_MODEL'=>2,
 );

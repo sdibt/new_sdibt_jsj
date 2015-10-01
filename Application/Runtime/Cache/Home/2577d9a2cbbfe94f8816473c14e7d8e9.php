@@ -25,7 +25,7 @@
     	<img src="/sdibt_jsj/Public/image/jsjlogo.png" alt=""  style = "width:600px;height:80px;margin:0 0 0 -10px"/>
     </div>
     <div class="fl_right">
-      <form action="/sdibt_jsj/index.php/Home/Search/showSearch" method="post" id="sitesearch">
+      <form action="/sdibt_jsj/Home/Search/showSearch" method="post" id="sitesearch">
         <fieldset>
           <legend>Site Search</legend>
           <input type="text" name ="val" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
@@ -35,10 +35,10 @@
     </div>
     <div id="topnav" class = "menu">  
       <ul >
-        <li class="active"><a href="/sdibt_jsj/index.php">首页</a></li>
-        	<?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/index.php/Home/Navigation/showNav/?type_id=<?php echo ($res['news_id']); ?>&news_id=1"><?php echo ($res['title']); ?></a>
+        <li class="active"><a href="/sdibt_jsj">首页</a></li>
+        	<?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/nav/?type_id=<?php echo ($res['news_id']); ?>&news_id=1"><?php echo ($res['title']); ?></a>
 		        <ul>
-		        	<?php if(is_array($result1[$res['news_id']])): $i = 0; $__LIST__ = $result1[$res['news_id']];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res1): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/index.php/Home/Navigation/showNav?type_id=<?php echo ($res['news_id']); ?>&news_id=<?php echo ($res1['news_id']); ?>" ><?php echo ($res1['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>  
+		        	<?php if(is_array($result1[$res['news_id']])): $i = 0; $__LIST__ = $result1[$res['news_id']];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res1): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/nav/?type_id=<?php echo ($res['news_id']); ?>&news_id=<?php echo ($res1['news_id']); ?>" ><?php echo ($res1['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>  
 		         </ul>
 		         </li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
@@ -53,7 +53,7 @@
       <div class="holder" >
         <h2 class="title" style="font-style:normal"><b><?php echo ($Title1['title']); ?>&nbsp;&nbsp;&raquo;</b></h2>
         <ul class="nostart" style="margin-left:60px;font-size:16px">
-          <?php if(is_array($Title)): $i = 0; $__LIST__ = $Title;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$t): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/index.php/Home/Navigation/showNav/?type_id=<?php echo ($t['type_id']); ?>&news_id=<?php echo ($t['news_id']); ?>"><?php echo ($t['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+          <?php if(is_array($Title)): $i = 0; $__LIST__ = $Title;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$t): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/nav/?type_id=<?php echo ($t['type_id']); ?>&news_id=<?php echo ($t['news_id']); ?>"><?php echo ($t['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
       </div>
     </div>
