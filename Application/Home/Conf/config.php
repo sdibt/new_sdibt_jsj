@@ -6,6 +6,7 @@ return array(
     'URL_ROUTE_RULES' => array( //定义路由规则
         'index' => 'Index/index',
         'nav' => 'Navigation/showNav',
+        'navSome' => 'Navigation/showNavSomeContent',
         'page' => 'HomePage/showPage',
         'con' =>'HomePage/showPageContent',
     ),

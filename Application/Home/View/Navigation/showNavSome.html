@@ -1,33 +1,33 @@
-<include file ="Public:header"/>
+<include file="Public:header"/>
 
 <div class="wrapper row3">
   <div id="container" class="clear">
     <!-- ####################################################################################################### -->
     <div id="left_column" >
       <div class="holder" >
-        <h2 class="title" style="font-style:normal"><b>学院动态&nbsp;&nbsp;&raquo;</b></h2>
+        <h2 class="title" style="font-style:normal"><b>{$Title1['title']}&nbsp;&nbsp;&raquo;</b></h2>
         <ul class="nostart" style="margin-left:50px;font-size:16px">
-        	<volist name="PageResult" id ="Pageres">
-         		 <li><a href="__APP__/Home/page/?type_id={$Pageres['news_id']}">&raquo;{$Pageres['title']}</a></li>
-          	</volist>
-
+          <volist name="Title" id="t">
+          	  <li><a href="__APP__/Home/nav/?type_id={$t['type_id']}&news_id={$t['news_id']}">&raquo;{$t['title']}</a></li>
+          </volist>
         </ul>
       </div>
     </div>
     <!-- ############ -->
-   <div id="content" style="width:600px;margin:20px 0 0 100px">
-      <h1 class="title" style="font-style:normal">{$Type_Title}&raquo;</h1>
+    <div id="content" style="width:600px;margin:20px 0 0 100px">
+      <h1 class="title" style="font-style:normal">{$Type_Title}&raquo;&nbsp;{$Type_Title1}&raquo;</h1>
 	      <ul class="" style="margin-left:30px;font-size:16px">
 	      	<volist name="Pagecontent" id = "Pagecon">
 	          <li style="margin-top:10px;">
-	          <a href="__APP__/Home/con/?type_id={$Pagecon['type_id']}&news_id={$Pagecon['news_id']}">{$Pagecon['title']}
+	          <a href="__APP__/Home/navSome/?type_id={$Pagecon['type_id']}&news_id={$Pagecon['news_id']}">{$Pagecon['title']}
 	          <span style="float:right">{$Pagecon['addtime']|substr=0,10}</span></a></li>
 			</volist>
 	      </ul>
 	      <div style="float:right">
 	      {$show}
 	      </div>
-</div>
+	</div>
   </div>
 </div>
-<include file ="Public:footer"/>
+
+<include file="Public:footer"/>

@@ -3,12 +3,9 @@
 #container #content{
 	display:block;
 	float:left;
-	width:960px;
+	width:980px;
 	overflow:hidden;
 	}
-#content img{
-	
-}
 /* ----------------------------------------------Generalise-------------------------------------*/
 
 #container #left_column .holder, #container #right_column .holder{

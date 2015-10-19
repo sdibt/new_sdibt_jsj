@@ -52,21 +52,27 @@
     <!-- ####################################################################################################### -->
     <div id="left_column" >
       <div class="holder" >
-        <h2 class="title" style="font-style:normal"><b>学院动态&nbsp;&nbsp;&raquo;</b></h2>
+        <h2 class="title" style="font-style:normal"><b><?php echo ($Title1['title']); ?>&nbsp;&nbsp;&raquo;</b></h2>
         <ul class="nostart" style="margin-left:50px;font-size:16px">
-        	<?php if(is_array($PageResult)): $i = 0; $__LIST__ = $PageResult;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$Pageres): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/page/?type_id=<?php echo ($Pageres['news_id']); ?>">&raquo;<?php echo ($Pageres['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-
+          <?php if(is_array($Title)): $i = 0; $__LIST__ = $Title;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$t): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/nav/?type_id=<?php echo ($t['type_id']); ?>&news_id=<?php echo ($t['news_id']); ?>">&raquo;<?php echo ($t['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
       </div>
     </div>
     <!-- ############ -->
-   <div id="content" style="width:600px;margin:20px 0 0 100px">
-      <h1 class="title" style="font-style:normal;" align="center"><b> <?php echo ($PageContent['title']); ?></b></h1>
-      <p align="center">发布时间:<?php echo ($PageContent['addtime']); ?></p>
-      <p><?php echo (htmlspecialchars_decode($PageContent['content'])); ?>
-</div>
+    <div id="content" style="width:600px;margin:20px 0 0 100px">
+      <h1 class="title" style="font-style:normal"><?php echo ($Type_Title); ?>&raquo;&nbsp;<?php echo ($Type_Title1); ?>&raquo;</h1>
+	      <ul class="" style="margin-left:30px;font-size:16px">
+	      	<?php if(is_array($Pagecontent)): $i = 0; $__LIST__ = $Pagecontent;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$Pagecon): $mod = ($i % 2 );++$i;?><li style="margin-top:10px;">
+	          <a href="/sdibt_jsj/Home/navSome/?type_id=<?php echo ($Pagecon['type_id']); ?>&news_id=<?php echo ($Pagecon['news_id']); ?>"><?php echo ($Pagecon['title']); ?>
+	          <span style="float:right"><?php echo (substr($Pagecon['addtime'],0,10)); ?></span></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+	      </ul>
+	      <div style="float:right">
+	      <?php echo ($show); ?>
+	      </div>
+	</div>
   </div>
 </div>
+
 <div class="wrapper">
 
   <div id="copyright" class="clear" style="width:960px;display:block;position:relative;">

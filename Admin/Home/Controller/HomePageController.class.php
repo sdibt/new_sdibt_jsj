@@ -82,7 +82,10 @@ public  function ruKou(){
         $type_id = intval($_SESSION['type_id']);
         $title    = htmlspecialchars($_POST['texttitle1']);
         $content  = htmlspecialchars($_POST['content1']);
-        $time     = $_POST['date1'];
+        if($_POST['date1']=='')
+            $time = Date('Y-m-d H:i:s');
+        else
+            $time = $_POST['date1'];
         $seecount = 0;
         if (empty($title)||empty($content)){
     

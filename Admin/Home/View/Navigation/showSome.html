@@ -3,14 +3,12 @@
         <div class="main">
             <!--右侧内容-->
             <div class="cont">
-                <div class="title">{$til}&raquo;</a>
-                </div>
+                <div class="title">{$til}&raquo;&nbsp;{$resSecondTil}&raquo;</div>
                 <div class="details">
                     <div class="details_operation clearfix">
                         <div class="bui_select">
-                            <a href="{:U('Home/Navigation/showAdd')}"><input type="button" value="添     加" class="add"></a>
+                            <a href="__APP__/Home/Navigation/showAddSomeOne/secondTitle/{$resSecondTil}"><input type="button" value="添     加" class="add"></a>
                         </div>
-                         
                     </div>
                     <!--表格-->
               
@@ -37,25 +35,12 @@
                             <tr>
                                 <!--这里的id和for里面的c1 需要循环出来-->
                                 <td>{$cnt++}</td>
-                                <td>
-                                <?php if ($res['content']==''){
-                                		  $flag='查看';
-										  $news_id=$res['news_id'];
-										  $url="__APP__/Home/Navigation/CountRuKou/id/$news_id";
-										  echo '[多]';
-									  }
-                                	  else{
-										  $news_id=$res['news_id'];
-										  $url="__APP__/Home/Navigation/upd/id/$news_id";
-										  $flag='修改';
-									  }
-                                ?>
-                                {$res['title']}</td>
+                                <td>{$res['title']}</td>
                                 <td>{$res['addtime']}</td>
                                 <td align="center">
-                                <a href="{$url}">
-                                <input type="button" value={$flag} class="btn"></a>
-                                <a href="__APP__/Home/Navigation/del/id/{$res['news_id']}">
+                                <a href="__APP__/Home/Navigation/updSomeOne/id/{$res['news_id']}">
+                                <input type="button" value="修改" class="btn"></a>
+                                <a href="__APP__/Home/Navigation/delSomeOne/id/{$res['news_id']}">
                                 <input type="button" value="删除" class="btn"></a></td>
                             </tr>
                          </volist> 
@@ -67,4 +52,4 @@
             </div>
         </div>
       
- <include file="Public:footer" />   
+ <include file="Public:footer" />       

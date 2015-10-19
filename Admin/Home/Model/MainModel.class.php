@@ -4,13 +4,13 @@ namespace Home\Model;
 
 class MainModel{
     
-    public function add($type_id,$title,$content,$time,$seecount){
+    public function add($type_id,$title,$content,$time,$count){
         $data= array(
             'type_id' => $type_id,
             'title' => $title,
             'content' => $content,
             'addtime' => $time,
-            'seecount' => $seecount
+            'count' => $count
         );
             M('news_main')->add($data);
     }

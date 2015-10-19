@@ -38,40 +38,54 @@
     <div class="content clearfix" style="height:660px">
         <div class="main">
             <!--右侧内容-->
-            
             <div class="cont">
-                <div class="title">导航栏的修改&raquo;</div>
+                <div class="title"><?php echo ($til); ?>&raquo;&nbsp;<?php echo ($resSecondTil); ?>&raquo;</div>
                 <div class="details">
                     <div class="details_operation clearfix">
                         <div class="bui_select">
-                            <a href="<?php echo U('Home/Navigation/showAddSet');?>"><input type="button" value="添     加" class="add"></a>
+                            <a href="/sdibt_jsj/admin.php/Home/Navigation/showAddSomeOne/secondTitle/<?php echo ($resSecondTil); ?>"><input type="button" value="添     加" class="add"></a>
                         </div>
                     </div>
                     <!--表格-->
-              <section class="column width6 first" style="margin-left:200px;">					
-					<h3>Add new Text</h3>	
-					<form id="sampleform" method="post" action="<?php echo U('Home/Navigation/updSetJudge');?>">
-						<fieldset>
-							<legend>Text info</legend>
-							<p>
-								<label class="required" for="title">ID</label><br/>
-								<input type="text"  class="title1" value="<?php echo ($res['news_id']); ?>" name="id1" style="height:20px;color:#000"/>
-								<small>(注:不能修改为已经存在的ID)</small>
-							</p>
-							<p>
-								<label class="required" for="title">Title</label><br/>
-								<input type="text"  class="title1" value="<?php echo ($res['title']); ?>" name="texttitle1" style="height:20px;color:#000"/>
-								<small>新的标题</small>
-							</p>		
-							<p class="box"><input type="submit" class="btn btn-green big" value="Save"/> or 
-										   <input type="reset" class="btn btn-green big" value="resetting"/>
-										   <input type="hidden" name="id" value="<?php echo ($res['news_id']); ?>"/></p>
-						</fieldset>
-					</form>
-				</section>     
+              
+                    <table class="table" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th width="15%">编号</th>
+                                <th width="25%">标题</th>
+                                <th width="35%">时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                            <td colspan= "4">
+                                <div class = "yahoo2" style="margin-left:60%"><?php echo ($show); ?></div>
+                            </td>
+                            
+                            </tr>
+                        
+                        </tfoot>
+                        <tbody>
+                        <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><tr>
+                                <!--这里的id和for里面的c1 需要循环出来-->
+                                <td><?php echo ($cnt++); ?></td>
+                                <td><?php echo ($res['title']); ?></td>
+                                <td><?php echo ($res['addtime']); ?></td>
+                                <td align="center">
+                                <a href="/sdibt_jsj/admin.php/Home/Navigation/updSomeOne/id/<?php echo ($res['news_id']); ?>">
+                                <input type="button" value="修改" class="btn"></a>
+                                <a href="/sdibt_jsj/admin.php/Home/Navigation/delSomeOne/id/<?php echo ($res['news_id']); ?>">
+                                <input type="button" value="删除" class="btn"></a></td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?> 
+                         
+                        </tbody>
+                    </table>
+            		     
                 </div>
             </div>
         </div>
+      
  
 	<!--左侧列表-->
         <div class="menu" style="height:570px">

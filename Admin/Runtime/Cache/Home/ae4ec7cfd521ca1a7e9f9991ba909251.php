@@ -31,7 +31,7 @@
         <div class="link fl">
         <a href="<?php echo U('Home/Admin/index');?>"><b>计科院</b></a>
         <span style="color:#000">&gt;&gt;</span>欢迎你: <?php echo $_SESSION['username']?>&nbsp;&nbsp;&nbsp;</div>
-        <div <a href="<?php echo U('Home/Manager/out');?>"><b >退出</b></a>
+        <div> <a href="<?php echo U('Home/Manager/out');?>"><b >退出</b></a>
              <a href="/sdibt_jsj/index.php" target="_Blank" style="float:right;margin:-5px -320px 0 0;font-size:15px;color:#000">学院首页&raquo;</a>
         </div>
     </div>
@@ -94,16 +94,18 @@
                     <li>
                         <h3 style="color:#fff"><span onclick="show()" id="change1" style="color:#fff"><?php echo ($_SESSION['change1']); ?></span>导航栏的信息管理</h3>
                         <dl id="menu1" style="display:<?php echo ($_SESSION['menu1']); ?>;">
-                        <?php if(is_array($result1)): $i = 0; $__LIST__ = $result1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><dd><a href="/sdibt_jsj/admin.php/Home/Navigation/ruKou/id/<?php echo ($res['news_id']); ?>"><?php echo ($res['title']); ?></a></dd><?php endforeach; endif; else: echo "" ;endif; ?>
                         <dd><a href="<?php echo U('Home/Navigation/showSet');?>">导航设置</a></dd>
+                        <?php if(is_array($result1)): $i = 0; $__LIST__ = $result1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><dd><a href="/sdibt_jsj/admin.php/Home/Navigation/ruKou/id/<?php echo ($res['news_id']); ?>"><?php echo ($res['title']); ?></a></dd><?php endforeach; endif; else: echo "" ;endif; ?>
+                        
                         </dl>
                     </li>
                     
                     <li>
                         <h3 style="color:#fff"><span onclick="show()" id="change2" style="color:#fff"><?php echo ($_SESSION['change2']); ?></span>首页信息管理</h3>
                         <dl id="menu2" style="display:<?php echo ($_SESSION['menu2']); ?>;">
-                            <?php if(is_array($result2)): $i = 0; $__LIST__ = $result2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><dd><a href="/sdibt_jsj/admin.php/Home/HomePage/ruKou/id/<?php echo ($res['news_id']); ?>"><?php echo ($res['title']); ?></a></dd><?php endforeach; endif; else: echo "" ;endif; ?>
                         <dd><a href="<?php echo U('Home/HomePage/showSet');?>">首页设置</a></dd>
+                            <?php if(is_array($result2)): $i = 0; $__LIST__ = $result2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><dd><a href="/sdibt_jsj/admin.php/Home/HomePage/ruKou/id/<?php echo ($res['news_id']); ?>"><?php echo ($res['title']); ?></a></dd><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <dd><a href="<?php echo U('Home/HomePage/showPic');?>">幻灯片设置</a></dd>
                         </dl>
                     </li>
                     <li>

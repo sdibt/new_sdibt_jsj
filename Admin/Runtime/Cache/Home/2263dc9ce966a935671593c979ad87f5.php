@@ -35,40 +35,43 @@
              <a href="/sdibt_jsj/index.php" target="_Blank" style="float:right;margin:-5px -320px 0 0;font-size:15px;color:#000">学院首页&raquo;</a>
         </div>
     </div>
-    <div class="content clearfix" style="height:660px">
+    <div class="content clearfix">
         <div class="main">
             <!--右侧内容-->
-            
             <div class="cont">
-                <div class="title">导航栏的修改&raquo;</div>
+                <div class="title"><?php echo ($til); ?>&raquo;&nbsp;<?php echo ($resSecondTil); ?>的添加&raquo;</div>
                 <div class="details">
-                    <div class="details_operation clearfix">
-                        <div class="bui_select">
-                            <a href="<?php echo U('Home/Navigation/showAddSet');?>"><input type="button" value="添     加" class="add"></a>
-                        </div>
-                    </div>
+                    
                     <!--表格-->
               <section class="column width6 first" style="margin-left:200px;">					
 					<h3>Add new Text</h3>	
-					<form id="sampleform" method="post" action="<?php echo U('Home/Navigation/updSetJudge');?>">
+					<form id="sampleform" method="post" action="<?php echo U('Home/Navigation/addSomeOne');?>">
 						<fieldset>
 							<legend>Text info</legend>
+
 							<p>
-								<label class="required" for="title">ID</label><br/>
-								<input type="text"  class="title1" value="<?php echo ($res['news_id']); ?>" name="id1" style="height:20px;color:#000"/>
-								<small>(注:不能修改为已经存在的ID)</small>
+								<label class="required" for="title">标题</label><br/>
+								<input type="text"  class="title1" value="" name="texttitle1" style="height:20px;color:#000"/>
+								<small>e.g. 学院简介</small>
 							</p>
 							<p>
-								<label class="required" for="title">Title</label><br/>
-								<input type="text"  class="title1" value="<?php echo ($res['title']); ?>" name="texttitle1" style="height:20px;color:#000"/>
-								<small>新的标题</small>
+								<label class="required" for="title">发布时间</label><br/>
+								<input name="date1" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',readOnly:true})" />
+							</p>
+							<p>
+								<label for="textdesc">Describe your Text</label><br/>
+								<textarea  class="large full" id="editor" name="content1" style="height:260px"></textarea>
+								 <script type="text/javascript">
+    								//实例化编辑器
+   									 //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+  								  var ue = UE.getEditor('editor');
+    							</script>
 							</p>		
 							<p class="box"><input type="submit" class="btn btn-green big" value="Save"/> or 
-										   <input type="reset" class="btn btn-green big" value="resetting"/>
-										   <input type="hidden" name="id" value="<?php echo ($res['news_id']); ?>"/></p>
+										   <input type="reset" class="btn btn-green big" value="resetting"/></p>
 						</fieldset>
 					</form>
-				</section>     
+				</section>   		     
                 </div>
             </div>
         </div>

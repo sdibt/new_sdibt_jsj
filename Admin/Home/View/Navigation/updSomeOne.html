@@ -2,34 +2,34 @@
     <div class="content clearfix">
         <div class="main">
             <!--右侧内容-->
+            
             <div class="cont">
-                <div class="title">{$til}的添加&raquo;</div>
+                <div class="title">{$til}&raquo;&nbsp;{$resSecondTil}的添加&raquo;</div>
                 <div class="details">
                     <div class="details_operation clearfix">
                         <div class="bui_select">
                             <a href="{:U('Home/Navigation/showAdd')}"><input type="button" value="添     加" class="add"></a>
                         </div>
-                        <span style="font-size:15px;margin-left:10%">如果该标题下有多篇文章添加:</span><a href="{:U('Home/Navigation/showAddSome')}"><span style="font-size:15px"><b>点击这里添加</b></span></a>
                     </div>
                     <!--表格-->
               <section class="column width6 first" style="margin-left:200px;">					
 					<h3>Add new Text</h3>	
-					<form id="sampleform" method="post" action="{:U('Home/Navigation/add')}">
+					<form id="sampleform" method="post" action="{:U('Home/Navigation/updJudgeSomeOne')}">
 						<fieldset>
 							<legend>Text info</legend>
 
 							<p>
 								<label class="required" for="title">标题</label><br/>
-								<input type="text"  class="title1" value="" name="texttitle1" style="height:20px;color:#000"/>
+								<input type="text"  class="title1" value="{$res['title']}" name="texttitle1" style="height:20px;color:#000"/>
 								<small>e.g. 学院简介</small>
 							</p>
 							<p>
 								<label class="required" for="title">发布时间</label><br/>
-								<input name="date1" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',readOnly:true})" />
+								<input name="date1" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',readOnly:true})" value="{$res['addtime']}"/>
 							</p>
 							<p>
 								<label for="textdesc">Describe your Text</label><br/>
-								<textarea  class="large full" id="editor" name="content1" style="height:260px"></textarea>
+								<textarea  class="large full" id="editor" name="content1" style="height:260px">{$res['content']}</textarea>
 								 <script type="text/javascript">
     								//实例化编辑器
    									 //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
@@ -37,10 +37,14 @@
     							</script>
 							</p>		
 							<p class="box"><input type="submit" class="btn btn-green big" value="Save"/> or 
-										   <input type="reset" class="btn btn-green big" value="resetting"/></p>
+										   <input type="reset" class="btn btn-green big" value="resetting"/>
+										   <input type="hidden" name="id" value="{$res['news_id']}"/></p>
 						</fieldset>
 					</form>
-				</section>   		     
+				</section>
+             
+                    
+            		     
                 </div>
             </div>
         </div>

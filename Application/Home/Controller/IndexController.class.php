@@ -9,12 +9,11 @@ class IndexController extends Controller {
         $where['type_id'] = 0; 
         $result = $sql->where($where)->order("news_id asc")->select();
         $this->assign('result',$result); 
-        
         foreach ($allResult as $key=>$val){
+            if($allResult[$key]['count']==0)
             $result1[$allResult[$key]['type_id']][$allResult[$key]['news_id']] = $val;
         }
         $this->assign('result1',$result1);
-        
         
         //首页信息
         //学院新闻
@@ -30,12 +29,25 @@ class IndexController extends Controller {
             $str = preg_replace($p, '', $str);
             $subres[$cnt]['content'] = $str;
             $cnt++;
-            if($cnt==9)
+            if($cnt==7)
                 break;
         }
         $this->assign('result2',$subres);
-
-        //四个小的模块显示
+           
+        //学院通知
+        $where['type_id'] = 2;
+        $result5 = $sql->where($where)->order('addtime desc')->select();
+        $cnt=0;
+        $p='/img.*alt.*?g&quot;/';
+        foreach ($result5 as $val){
+            $Result5[$cnt]=$val;
+            $cnt++;
+            if($cnt==10)
+                break;
+        }
+        $this->assign('result5',$Result5);
+        
+        //三个小的模块显示
         $where['type_id'] = array(gt,1);
         $allResult1 = $sql->where($where)->order('addtime desc')->select();
         foreach ($allResult1 as $key=>$val){
@@ -44,12 +56,9 @@ class IndexController extends Controller {
         }
         $this->assign('result3',$result3);
         $where['type_id'] = 0;
-        $where['news_id'] = array(neq,1);
+        $where['news_id'] = array(gt,2);
         $result4 = $sql->where($where)->order("news_id asc")->select();
         $this->assign('result4',$result4);
-        //dump($result4);
-        
-        
         //showpic
         
         $where['isshow']=1;

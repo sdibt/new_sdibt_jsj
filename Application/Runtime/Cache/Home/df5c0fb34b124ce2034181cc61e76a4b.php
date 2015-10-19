@@ -14,6 +14,7 @@
 <script type="text/javascript" src="/sdibt_jsj/Public/scripts1/jquery.timers.1.2.js"></script>
 <script type="text/javascript" src="/sdibt_jsj/Public/scripts1/jquery.galleryview.2.1.1.min.js"></script>
 <script type="text/javascript" src="/sdibt_jsj/Public/scripts1/jquery.galleryview.setup.js"></script>
+<script type="text/javascript" src="/sdibt_jsj/Public/scripts1/scrollCor.js"></script>
 <!-- End Homepage Specific Elements -->
 
 </head>
@@ -52,8 +53,8 @@
     <div id="left_column" >
       <div class="holder" >
         <h2 class="title" style="font-style:normal"><b>学院动态&nbsp;&nbsp;&raquo;</b></h2>
-        <ul class="nostart" style="margin-left:60px;font-size:16px">
-        	<?php if(is_array($PageResult)): $i = 0; $__LIST__ = $PageResult;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$Pageres): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/page/?type_id=<?php echo ($Pageres['news_id']); ?>"><?php echo ($Pageres['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+        <ul class="nostart" style="margin-left:50px;font-size:16px">
+        	<?php if(is_array($PageResult)): $i = 0; $__LIST__ = $PageResult;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$Pageres): $mod = ($i % 2 );++$i;?><li><a href="/sdibt_jsj/Home/page/?type_id=<?php echo ($Pageres['news_id']); ?>">&raquo;<?php echo ($Pageres['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 
         </ul>
       </div>

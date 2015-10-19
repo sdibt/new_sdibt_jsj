@@ -3,18 +3,13 @@
         <div class="main">
             <!--右侧内容-->
             <div class="cont">
-                <div class="title">{$til}的添加&raquo;</div>
+                <div class="title">{$til}&raquo;&nbsp;{$resSecondTil}的添加&raquo;</div>
                 <div class="details">
-                    <div class="details_operation clearfix">
-                        <div class="bui_select">
-                            <a href="{:U('Home/Navigation/showAdd')}"><input type="button" value="添     加" class="add"></a>
-                        </div>
-                        <span style="font-size:15px;margin-left:10%">如果该标题下有多篇文章添加:</span><a href="{:U('Home/Navigation/showAddSome')}"><span style="font-size:15px"><b>点击这里添加</b></span></a>
-                    </div>
+                    
                     <!--表格-->
               <section class="column width6 first" style="margin-left:200px;">					
 					<h3>Add new Text</h3>	
-					<form id="sampleform" method="post" action="{:U('Home/Navigation/add')}">
+					<form id="sampleform" method="post" action="{:U('Home/Navigation/addSomeOne')}">
 						<fieldset>
 							<legend>Text info</legend>
 

@@ -72,11 +72,13 @@
                         <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><tr>
                                 <!--这里的id和for里面的c1 需要循环出来-->
                                 <td><?php echo ($cnt++); ?></td>
-                                <td><?php echo ($res['title']); ?></td>
+                                <td>
+                                <?php if ($res['content']==''){ $flag='查看'; $news_id=$res['news_id']; $url="/sdibt_jsj/admin.php/Home/Navigation/CountRuKou/id/$news_id"; echo '[多]'; } else{ $news_id=$res['news_id']; $url="/sdibt_jsj/admin.php/Home/Navigation/upd/id/$news_id"; $flag='修改'; } ?>
+                                <?php echo ($res['title']); ?></td>
                                 <td><?php echo ($res['addtime']); ?></td>
                                 <td align="center">
-                                <a href="/sdibt_jsj/admin.php/Home/Navigation/upd/id/<?php echo ($res['news_id']); ?>">
-                                <input type="button" value="修改" class="btn"></a>
+                                <a href="<?php echo ($url); ?>">
+                                <input type="button" value=<?php echo ($flag); ?> class="btn"></a>
                                 <a href="/sdibt_jsj/admin.php/Home/Navigation/del/id/<?php echo ($res['news_id']); ?>">
                                 <input type="button" value="删除" class="btn"></a></td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?> 

@@ -14,6 +14,7 @@ class SearchController extends Controller {
         $this->assign('result',$result);
         
         foreach ($allResult as $key=>$val){
+            if($allResult[$key]['count']==0)
             $result1[$allResult[$key]['type_id']][$allResult[$key]['news_id']] = $val;
         }
         $this->assign('result1',$result1);

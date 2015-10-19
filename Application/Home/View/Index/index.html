@@ -6,7 +6,7 @@
     <div id="featured_slide">
       <ul>
         <volist name = "pic" id = "showpic">
-        	<li><img src="{$showpic['pic_url']}" alt="" />
+        	<li><img src="{$showpic['pic_url']}" alt=""/>
 	          <div class="panel-overlay">
 	            <h2>{$showpic['title']}</h2>
 	            <p>{$showpic['content']}</p>
@@ -18,26 +18,51 @@
     <!-- ###### -->
     <div class="intro clear">
     
-       <!-- <div class="welcome clear"><img class="imgl" src="__PUBLIC__/images1/5.png" alt="" />    
-          <h2 style="font-style:normal;float:left; width:283px"><b>欢迎来到计算机科学与技术学院</b></h2>
-          <p>计算机科学与技术学院属于山东工商学院的二级学院，现有计算机科学与技术、数字媒体技术、通信工程、网络工程4个本科专业，在校本科生923人。</p>
-      </div>  -->
       <div class="popular"><br/><br/><br/>
         <h2 style="font-style:normal">&raquo;<b>学院新闻</b>
           <a href="__APP__/Home/page/?type_id=1">
-          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 280px"/>
+          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 185px"/>
           </a></h2>
-          <hr></hr>
           <ul>
           <volist name="result2" id ="Res">
 	            <li>
-	              <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">{$Res['title']|substr=0,36}</a><span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
+	              <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">
+	              <?php
+		              $title=mb_substr($Res['title'],0,15,'utf-8');
+				  ?>
+					  {$title}&hellip;
+				  </a><span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
 	            </li>
 		  </volist>	
  
           </ul>
       </div>
     </div>
+	    <div class="intro clear">	    
+	      <div class="popular"><br/><br/><br/>
+	        <h2 style="font-style:normal">&raquo;<b>学院通知</b>
+	          <a href="__APP__/Home/page/?type_id=2">
+	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 185px"/>
+	          </a></h2> 
+	          <ul>
+				<div id="scroll_div" class="conter" style="overflow:hidden;height:230px;float:left;">
+    				<div id="scroll_begin" style="float:left;"> 
+	       			   <volist name="result5" id ="Res">
+		        	     <li>
+		           		   <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">
+		            		  <?php
+		             		       $title=mb_substr($Res['title'],0,15,'utf-8');
+					 		  ?>
+					 	   {$title}&hellip;</a>
+		              	   <span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
+		           		 </li>
+					  </volist>	
+ 					</div>
+   				 <div id="scroll_end" style="float:left;"></div>
+				</div> 
+	          </ul>
+	      </div>
+	    </div>
   </div>
 	<div id="container" class="clear">
     
@@ -48,7 +73,7 @@
         <div id="quicklinks" >
 	          <h2 style="font-style:normal">&raquo;<b>{$res['title']}</b>
 	          <a href="__APP__/Home/page/?type_id={$res['news_id']}">
-	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 278px;"/></a></h2>
+	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 195px;"/></a></h2>
 	          <ul>
 	          <volist name="result3[$res['news_id']]" id ="Res">
 	            <li>
@@ -63,6 +88,20 @@
    </div>
   </div>
 </div>
-
+<!-- 滚动广告的控制 -->
+<script>   
+        var   speed=30   
+        scroll_end.innerHTML=scroll_begin.innerHTML   
+        function   Marquee(){   
+        if(scroll_end.offsetTop-scroll_div.scrollTop<=0)     
+        	scroll_div.scrollTop-=scroll_begin.offsetHeight   
+        else{   
+        	scroll_div.scrollTop++   
+        }   
+        }   
+        var   MyMar=setInterval(Marquee,speed)  
+        scroll_div.onmouseover=function()   {clearInterval(MyMar)}//鼠标移上时清除定时器达到滚动停止的目的   
+        scroll_div.onmouseout=function()   {MyMar=setInterval(Marquee,speed)}//鼠标移开时重设定时器   
+</script>  
 
 <include file="Public:footer" />
