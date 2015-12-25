@@ -4,13 +4,20 @@ use Think\Controller;
 use Think\Page;
 class NavigationController extends Controller {
     public function showNav(){
+
+        //导航栏标题的平均分配
+        $sql = M('news_main');
+        $where['type_id'] = 0;
+        $count = $sql -> where($where) -> count();
+        $this->assign('count',$count);
+
         //导航栏的显示
         $sql = M('news_main');
         $allResult = $sql->order("news_id asc")->select();
         $where['type_id'] = 0;
         $result = $sql->where($where)->order("news_id asc")->select();
         $this->assign('result',$result);
-        
+
         foreach ($allResult as $key=>$val){
             if($allResult[$key]['count']==0)
             $result1[$allResult[$key]['type_id']][$allResult[$key]['news_id']] = $val;
@@ -56,6 +63,13 @@ class NavigationController extends Controller {
         $count = $_SESSION['News_id'];
         $Type_Title = $_SESSION['Type_Title'];
         $Type_Title1 = $_SESSION['Type_Title1'];
+
+        //导航栏标题的平均分配
+        $sql = M('news_main');
+        $where['type_id'] = 0;
+        $count = $sql -> where($where) -> count();
+        $this->assign('count',$count);
+
         //导航栏的显示
         $sql = M('news_main');
         $allResult = $sql->order("news_id asc")->select();

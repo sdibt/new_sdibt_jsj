@@ -6,7 +6,7 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <link rel="stylesheet" href="__PUBLIC__/styles1/3_column.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/styles1/layout.css" type="text/css" />
-<link rel="stylesheet" href="__PUBLIC__/styles1/xiala.css" type="text/css" />
+<!--<link rel="stylesheet" href="__PUBLIC__/styles1/xiala.css" type="text/css" />-->
 <!-- <css href="__PUBLIC__/Css/page.css" /> -->
 <!-- Homepage Specific Elements -->
 <script type="text/javascript" src="__PUBLIC__/scripts1/jquery-1.4.1.min.js"></script>
@@ -16,9 +16,43 @@
 <script type="text/javascript" src="__PUBLIC__/scripts1/jquery.galleryview.setup.js"></script>
 <script type="text/javascript" src="__PUBLIC__/scripts1/scrollCor.js"></script>
 <!-- End Homepage Specific Elements -->
+  <!--$xxx-->
+<style>
+    .menu ul li {
+        float:left;
+        position:relative;
+    }
+    .menu ul li a {
+        display:block;
+        text-align:center;
+        text-decoration:none;
+        width:calc(890px/{$count});
+        height:40px;
+        color:#000;
+        border:1px solid #fff;
+        border-width:1px 1px 0 0;
+        background:#c9c9a7;
+        line-height:40px;
+        font-size:12px;
+    }
 
+    .menu ul li ul {
+        display: none;
+    }
+
+    .menu ul li:hover ul {
+        display:block;
+        position:absolute;
+        top:40px;
+        left:0;
+        width:105px;
+        z-index:9999; /* z-index的值设置成高点，就会顶在上层了，不会盖住了。 */
+    }
+
+</style>
 </head>
 <body id="top">
+
 <div class="wrapper row1">
   <div id="header" class="clear">
     <div class="fl_left">
@@ -34,15 +68,15 @@
         </fieldset>
       </form>
     </div>
-    <div id="topnav" class = "menu">  
-      <ul >
+    <div id="topnav" class = "menu">
+      <ul>
         <li class="active"><a href="__APP__">首页</a></li>
         	<volist name="result" id="res">
-		        <li><a href="__APP__/Home/nav/?type_id={$res['news_id']}&news_id=1">{$res['title']}</a>
+		        <li ><a href="__APP__/Home/nav/?type_id={$res['news_id']}&news_id=1">{$res['title']}</a>
 		        <ul>
 		        	<volist name="result1[$res['news_id']]" id="res1">
-					   	<li><a href="__APP__/Home/nav/?type_id={$res['news_id']}&news_id={$res1['news_id']}" >{$res1['title']}</a></li>
-					</volist>  
+					   	<li><a href="__APP__/Home/nav/?type_id={$res['news_id']}&news_id={$res1['news_id']}">{$res1['title']}</a></li>
+                    </volist>
 		         </ul>
 		         </li>
 		     </volist>

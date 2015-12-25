@@ -3,6 +3,12 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
+        //导航栏标题的平均分配
+        $sql = M('news_main');
+        $where['type_id'] = 0;
+        $count = $sql -> where($where) -> count();
+        $this->assign('count',$count);
+
         //导航栏
         $sql = M('news_main');
         $allResult = $sql->order("news_id asc")->select();
