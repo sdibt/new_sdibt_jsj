@@ -28,7 +28,7 @@
 	            <li>
 	              <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">
 	              <?php
-		              $title=mb_substr($Res['title'],0,15,'utf-8');
+		              $title=mb_substr($Res['title'],0,12,'utf-8');
 				  ?>
 					  {$title}&hellip;
 				  </a><span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
@@ -51,7 +51,7 @@
 		        	     <li>
 		           		   <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">
 		            		  <?php
-		             		       $title=mb_substr($Res['title'],0,15,'utf-8');
+		             		       $title=mb_substr($Res['title'],0,12,'utf-8');
 					 		  ?>
 					 	   {$title}&hellip;</a>
 		              	   <span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
@@ -77,7 +77,12 @@
 	          <ul>
 	          <volist name="result3[$res['news_id']]" id ="Res">
 	            <li>
-	              <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">{$Res['title']|substr=0,36}</a><span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
+	              <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">
+					  <?php
+		           	       $title=mb_substr($Res['title'],0,15,'utf-8');
+					  ?>
+					  {$title}&hellip;
+				  </a><span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
 	            </li>
 			  </volist>	
 	          </ul>
