@@ -30,9 +30,7 @@ class SearchController extends Controller {
         import("ORG.Util.Page");//导入分页助手类
         $val = $_POST['val'];
         $keywords = '%'.$val.'%';
-        
-        /* dump($keywords);
-        dump($val); */
+
         $sql=M('home_page');
         $whereS['title|content']=array('like',$keywords);
         
