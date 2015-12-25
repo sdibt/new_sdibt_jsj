@@ -3,7 +3,7 @@
 	display:block;
 	clear:both;
 	width:1040px;
-	margin:0;
+	margin:-30px;
 
 	text-align:center;
 	}
@@ -22,6 +22,7 @@
 #topnav ul, #topnav li{
 	margin:0;
 	padding:0;
+	/*width: 240px;*/
 	list-style:none;
 	}
 
