@@ -48,7 +48,7 @@ class IndexController extends Controller {
         foreach ($result5 as $val){
             $Result5[$cnt]=$val;
             $cnt++;
-            if($cnt==10)
+            if($cnt==7)
                 break;
         }
         $this->assign('result5',$Result5);

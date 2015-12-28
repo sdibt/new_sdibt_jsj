@@ -45,7 +45,7 @@
 	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 185px"/>
 	          </a></h2> 
 	          <ul>
-				<div id="scroll_div" class="conter" style="overflow:hidden;height:230px;float:left;">
+				<div id="scroll_div" class="conter" style="overflow:hidden;height:250px;float:left;">
     				<div id="scroll_begin" style="float:left;"> 
 	       			   <volist name="result5" id ="Res">
 		        	     <li>
@@ -94,19 +94,19 @@
   </div>
 </div>
 <!-- 滚动广告的控制 -->
-<script>   
-        var   speed=30   
-        scroll_end.innerHTML=scroll_begin.innerHTML   
-        function   Marquee(){   
-        if(scroll_end.offsetTop-scroll_div.scrollTop<=0)     
-        	scroll_div.scrollTop-=scroll_begin.offsetHeight   
-        else{   
-        	scroll_div.scrollTop++   
-        }   
-        }   
-        var   MyMar=setInterval(Marquee,speed)  
-        scroll_div.onmouseover=function()   {clearInterval(MyMar)}//鼠标移上时清除定时器达到滚动停止的目的   
-        scroll_div.onmouseout=function()   {MyMar=setInterval(Marquee,speed)}//鼠标移开时重设定时器   
-</script>  
+<!--<script>   -->
+        <!--var   speed=30   -->
+        <!--scroll_end.innerHTML=scroll_begin.innerHTML   -->
+        <!--function   Marquee(){   -->
+        <!--if(scroll_end.offsetTop-scroll_div.scrollTop<=0)     -->
+        	<!--scroll_div.scrollTop-=scroll_begin.offsetHeight   -->
+        <!--else{   -->
+        	<!--scroll_div.scrollTop++   -->
+        <!--}   -->
+        <!--}   -->
+        <!--var   MyMar=setInterval(Marquee,speed)  -->
+        <!--scroll_div.onmouseover=function()   {clearInterval(MyMar)}//鼠标移上时清除定时器达到滚动停止的目的   -->
+        <!--scroll_div.onmouseout=function()   {MyMar=setInterval(Marquee,speed)}//鼠标移开时重设定时器   -->
+<!--</script>  -->
 
 <include file="Public:footer" />
