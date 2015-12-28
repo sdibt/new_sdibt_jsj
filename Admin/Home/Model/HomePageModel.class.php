@@ -22,6 +22,10 @@ class HomePageModel{
          M('home_page')
          ->where($where)
          ->delete();
+        if($type == 0){
+            $where1['type_id'] = $id;
+            M('home_page') ->where($where1) ->delete();
+        }
     }
     public function showUpd($type,$id){
         $where['type_id']=$type;

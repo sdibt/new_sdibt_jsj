@@ -22,6 +22,14 @@ class MainModel{
          M('news_main')
          ->where($where)
          ->delete();
+        if ($type == 0){
+            $where1['type_id'] = $id;
+            M('news_main') -> where($where1) -> delete();
+        } else {
+            $where2['type_id'] = $type;
+            $where2['count'] = $id;
+            M('news_main') -> where($where2) -> delete();
+        }
     }
     public function showUpd($type,$id){
         $where['type_id']=$type;
