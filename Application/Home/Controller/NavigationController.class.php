@@ -13,14 +13,19 @@ class NavigationController extends Controller {
 
         //导航栏的显示
         $sql = M('news_main');
-        $allResult = $sql->order("news_id asc")->select();
+        $allResult = $sql->order("type_id,news_id asc")->select();
         $where['type_id'] = 0;
         $result = $sql->where($where)->order("news_id asc")->select();
         $this->assign('result',$result);
-
+        $type = 0;
+        $cas = 0;
         foreach ($allResult as $key=>$val){
+            if ($allResult[$key]['type_id']!=$type){
+                $type = $allResult[$key]['type_id'];
+                $cas = 0;
+            }
             if($allResult[$key]['count']==0)
-            $result1[$allResult[$key]['type_id']][$allResult[$key]['news_id']] = $val;
+                $result1[$allResult[$key]['type_id']][$cas++] = $val;
         }
         $this->assign('result1',$result1);
         
@@ -67,19 +72,24 @@ class NavigationController extends Controller {
         //导航栏标题的平均分配
         $sql = M('news_main');
         $where['type_id'] = 0;
-        $count = $sql -> where($where) -> count();
-        $this->assign('count',$count);
+        $count1 = $sql -> where($where) -> count();
+        $this->assign('count',$count1);
 
         //导航栏的显示
         $sql = M('news_main');
-        $allResult = $sql->order("news_id asc")->select();
+        $allResult = $sql->order("type_id,news_id asc")->select();
         $where['type_id'] = 0;
         $result = $sql->where($where)->order("news_id asc")->select();
         $this->assign('result',$result);
-        
+        $type = 0;
+        $cas = 0;
         foreach ($allResult as $key=>$val){
+            if ($allResult[$key]['type_id']!=$type){
+                $type = $allResult[$key]['type_id'];
+                $cas = 0;
+            }
             if($allResult[$key]['count']==0)
-            $result1[$allResult[$key]['type_id']][$allResult[$key]['news_id']] = $val;
+                $result1[$allResult[$key]['type_id']][$cas++] = $val;
         }
         $this->assign('result1',$result1);
         
@@ -100,7 +110,6 @@ class NavigationController extends Controller {
         $sql=M('news_main');
         $whereP['type_id']=$id;
         $whereP['count']=$count;
-        
         $total = $sql->where($whereP)->count();
         $num_per_page = 10;
         $page = new Page($total,$num_per_page);
@@ -123,15 +132,27 @@ class NavigationController extends Controller {
     }
     
     public function showNavSomeContent(){
+        //导航栏标题的平均分配
         $sql = M('news_main');
-        $allResult = $sql->order("news_id asc")->select();
+        $where['type_id'] = 0;
+        $count1 = $sql -> where($where) -> count();
+        $this->assign('count',$count1);
+
+        //导航栏的显示
+        $sql = M('news_main');
+        $allResult = $sql->order("type_id,news_id asc")->select();
         $where['type_id'] = 0;
         $result = $sql->where($where)->order("news_id asc")->select();
         $this->assign('result',$result);
-        
+        $type = 0;
+        $cas = 0;
         foreach ($allResult as $key=>$val){
+            if ($allResult[$key]['type_id']!=$type){
+                $type = $allResult[$key]['type_id'];
+                $cas = 0;
+            }
             if($allResult[$key]['count']==0)
-                $result1[$allResult[$key]['type_id']][$allResult[$key]['news_id']] = $val;
+                $result1[$allResult[$key]['type_id']][$cas++] = $val;
         }
         $this->assign('result1',$result1);
         

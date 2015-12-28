@@ -11,13 +11,19 @@ class IndexController extends Controller {
 
         //导航栏
         $sql = M('news_main');
-        $allResult = $sql->order("news_id asc")->select();
+        $allResult = $sql->order("type_id,news_id asc")->select();
         $where['type_id'] = 0; 
         $result = $sql->where($where)->order("news_id asc")->select();
-        $this->assign('result',$result); 
+        $this->assign('result',$result);
+        $type = 0;
+        $cas = 0;
         foreach ($allResult as $key=>$val){
+            if ($allResult[$key]['type_id']!=$type){
+                $type = $allResult[$key]['type_id'];
+                $cas = 0;
+            }
             if($allResult[$key]['count']==0)
-            $result1[$allResult[$key]['type_id']][$allResult[$key]['news_id']] = $val;
+            $result1[$allResult[$key]['type_id']][$cas++] = $val;
         }
         $this->assign('result1',$result1);
         
