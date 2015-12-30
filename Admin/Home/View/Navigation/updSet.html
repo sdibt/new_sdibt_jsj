@@ -13,14 +13,15 @@
                     </div>
                     <!--表格-->
               <section class="column width6 first" style="margin-left:200px;">					
-					<h3>Add new Text</h3>	
+					<h3>Update new Text</h3>
 					<form id="sampleform" method="post" action="{:U('Home/Navigation/updSetJudge')}">
 						<fieldset>
 							<legend>Text info</legend>
 							<p>
 								<label class="required" for="title">ID</label><br/>
 								<input type="text"  class="title1" value="{$res['news_id']}" name="id1" style="height:20px;color:#000"/>
-								<small>(注:不能修改为已经存在的ID)</small>
+								<small>新的ID</small>
+								<small style="color:red;">(注:不能修改为已经存在的ID)</small>
 							</p>
 							<p>
 								<label class="required" for="title">Title</label><br/>
