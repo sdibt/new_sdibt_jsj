@@ -33,7 +33,8 @@ class HomePageController extends Controller {
         //侧栏显示
         $sql = M('home_page');
         $whereP['type_id'] = 0;
-        $allPageResult = $sql->where($where)->order("news_id asc")->select();
+        $whereP['news_id'] = array(neq,3);
+        $allPageResult = $sql->where($whereP)->order("news_id asc")->select();
         $this->assign('PageResult',$allPageResult);
         
         //分页 list显示
@@ -96,7 +97,8 @@ class HomePageController extends Controller {
         //侧栏显示
         $sql = M('home_page');
         $whereP['type_id'] = 0;
-        $allPageResult = $sql->where($where)->order("news_id asc")->select();
+        $whereP['news_id'] = array(neq,3);
+        $allPageResult = $sql->where($whereP)->order("news_id asc")->select();
         $this->assign('PageResult',$allPageResult);
     
         //content显示

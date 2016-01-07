@@ -59,7 +59,7 @@ class IndexController extends Controller {
         }
         $this->assign('result5',$Result5);
         
-        //三个小的模块显示
+        // 教学科研 企业招聘的模块显示
         $where['type_id'] = array(gt,1);
         $allResult1 = $sql->where($where)->order('addtime desc')->select();
         foreach ($allResult1 as $key=>$val){
@@ -68,7 +68,7 @@ class IndexController extends Controller {
         }
         $this->assign('result3',$result3);
         $where['type_id'] = 0;
-        $where['news_id'] = array(gt,2);
+        $where['news_id'] = array(gt,3);
         $result4 = $sql->where($where)->order("news_id asc")->select();
         $this->assign('result4',$result4);
         //showpic

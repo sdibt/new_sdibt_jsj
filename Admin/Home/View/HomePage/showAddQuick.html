@@ -1,0 +1,41 @@
+<include file="Public:header" />
+    <div class="content clearfix">
+        <div class="main">
+            <!--右侧内容-->
+            <div class="cont">
+                <div class="title">{$til}的添加&raquo;</div>
+                <div class="details">
+                    <div class="details_operation clearfix">
+                        <div class="bui_select">
+                            <a href="{:U('Home/HomePage/showAddQuick')}"><input type="button" value="添     加" class="add"></a>
+                        </div>
+                    </div>
+                    <!--表格-->
+              <section class="column width6 first" style="margin-left:200px;">					
+					<h3>Add new URL</h3>
+					<form id="sampleform" method="post" action="{:U('Home/HomePage/addQuick')}">
+						<fieldset>
+							<legend>Text info</legend>
+
+							<p>
+								<label class="required" for="title">网站名称</label><br/>
+								<input type="text"  class="title1" value="" name="texttitle1" style="height:20px;color:#000"/>
+								<small>e.g. ACM OJ</small>
+							</p>
+							<p>
+								<label class="required" for="title">添加时间</label><br/>
+								<input name="date1" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',readOnly:true})" />
+							</p>
+							<p>
+								<label for="textdesc">网站URL地址</label><br/>
+								<textarea  class="large full" id="editor" name="content1" style="height:20px"></textarea>
+							</p>		
+							<p class="box"><input type="submit" class="btn btn-green big" value="Save"/> or 
+										   <input type="reset" class="btn btn-green big" value="resetting"/></p>
+						</fieldset>
+					</form>
+				</section>   		     
+                </div>
+            </div>
+        </div>
+ <include file="Public:footer" />       
