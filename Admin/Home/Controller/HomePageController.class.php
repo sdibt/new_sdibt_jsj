@@ -7,7 +7,11 @@ class HomePageController extends MainController {
     //首页通用类
 public  function ruKou(){
         $_SESSION['type_id']=intval($_GET['id']);
-        $this->redirect("show");
+        if ($_SESSION['type_id']==3){
+            $this->redirect("showQuick");
+        }else{
+            $this->redirect("show");
+        }
     }
     public function showAdd(){
         //导航栏
@@ -489,6 +493,151 @@ public function showAddSet(){
         ->where($where)
         ->save($result[0]);
         $this->redirect('HomePage/showPic');
+    }
+
+
+
+    //快速链接
+    public function showAddQuick(){
+        //导航栏
+        $sql=M('news_main');
+        $id = intval($_SESSION['type_id']);
+        $where['type_id']=0;
+        $result1=$sql->where($where)->order("news_id asc")->select();
+        $this->assign('result1',$result1);
+
+        //左栏首页
+        $sql=M('home_page');
+        $where['type_id']=0;
+        $result2=$sql
+            ->where($where)
+            ->order("news_id asc")
+            ->select();
+        $this->assign('result2',$result2);
+        foreach ($result2 as $key=>$val){
+            if($result2[$key]['news_id']==$id){
+                $til = $val;
+            }
+        }
+        $this->assign('til',$til['title']);
+
+        $this->display();
+    }
+    public function showQuick(){
+
+        import("ORG.Util.Page");//导入分页助手类
+        $id = intval($_SESSION['type_id']);
+        $sql=M('home_page');
+        $where['type_id']=$id;
+
+        $total = $sql->where($where)->count();
+        $num_per_page = 10;
+        $page = new Page($total,$num_per_page);
+
+        $page->setConfig('header','篇文章');
+        $show = $page->show();
+
+        $result=$sql->where($where)
+            ->order('addtime desc')
+            ->limit("$page->firstRow,$page->listRows")
+            ->select();
+        $this->assign('result',$result);
+        $this->assign('show',$show);
+        //导航栏
+        $sql=M('news_main');
+        $where['type_id']=0;
+        $result1=$sql->where($where)->order("news_id asc")->select();
+        $this->assign('result1',$result1);
+
+        //左栏首页
+        $sql=M('home_page');
+        $where['type_id']=0;
+        $result2=$sql->where($where)->order("news_id asc")->select();
+        $this->assign('result2',$result2);
+        foreach ($result2 as $key=>$val){
+            if($result2[$key]['news_id']==$id){
+                $til = $val;
+            }
+        }
+        $this->assign('til',$til['title']);
+
+        $cnt=1;
+        $this->assign('cnt',$cnt);
+        $this->display();
+    }
+    public function addQuick(){
+
+        header("content-type:text/html;charset=utf-8");
+        $type_id = intval($_SESSION['type_id']);
+        $title    = htmlspecialchars($_POST['texttitle1']);
+        $content  = htmlspecialchars($_POST['content1']);
+        if($_POST['date1']=='')
+            $time = Date('Y-m-d H:i:s');
+        else
+            $time = $_POST['date1'];
+        $seecount = 0;
+        if (empty($title)||empty($content)){
+
+            echo "<script>alert('标题或者内容不能为空!');
+              location.href='showAddQuick';</script>";
+
+        }else{
+
+            D('HomePage')->add($type_id,$title,$content,$time,$seecount);
+            echo "<script language='javascript'>\n";
+            echo "alert('添加成功');\n";
+            echo "location.href='showQuick';\n";
+            echo "</script>";
+        }
+    }
+    public function delQuick(){
+        header("content-type:text/html;charset=utf-8");
+
+        $id = intval($_GET['id']);
+        D('HomePage')->del($_SESSION['type_id'],$id);
+        $url= U('Home/HomePage/showQuick');
+        $this->success('删除成功',$url,5);
+    }
+    public function updQuick(){
+        $id= intval($_GET['id']);
+        $info = D('HomePage')->showUpd($_SESSION['type_id'],$id);
+        $this->assign('res',$info[0]);
+
+        $sql=M('news_main');
+        $id = $_SESSION['type_id'];
+        $where['type_id']=0;
+        $result1=$sql->where($where)->order("news_id asc")->select();
+        $this->assign('result1',$result1);
+
+        //左栏首页
+        $sql=M('home_page');
+        $where['type_id']=0;
+        $result2=$sql->where($where)->order("news_id asc")->select();
+        $this->assign('result2',$result2);
+        foreach ($result2 as $key=>$val){
+            if($result2[$key]['news_id']==$id){
+                $til = $val;
+            }
+        }
+        $this->assign('til',$til['title']);
+
+        $this->display();
+    }
+    public function updJudgeQuick(){
+        header("content-type:text/html;charset=utf-8");
+
+        $id = intval($_POST['id']);
+        $time = $_POST['date1'];
+        $textinfo['type_id']= $_SESSION['type_id'];
+        $textinfo['title']= htmlspecialchars($_POST['texttitle1']);
+        $textinfo['content']= htmlspecialchars($_POST['content1']);
+        $textinfo['addtime']= $time;
+        $textinfo['seecount']= 0;
+
+        D('HomePage')->upd($_SESSION['type_id'],$id,$textinfo);
+
+        echo "<script>alert('修改成功!');
+              location.href='showQuick';</script>";
     }
 }
 
