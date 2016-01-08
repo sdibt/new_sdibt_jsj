@@ -58,7 +58,19 @@ class IndexController extends Controller {
                 break;
         }
         $this->assign('result5',$Result5);
-        
+
+        //学院通知
+        $where['type_id'] = 3;
+        $result_quick = $sql->where($where)->order('addtime desc')->select();
+        $cnt=0;
+        foreach ($result_quick as $val){
+            $Result_quick[$cnt]=$val;
+            $cnt++;
+            if($cnt==10)
+                break;
+        }
+        $this->assign('result_quick',$Result_quick);
+
         // 教学科研 企业招聘的模块显示
         $where['type_id'] = array(gt,1);
         $allResult1 = $sql->where($where)->order('addtime desc')->select();

@@ -68,7 +68,16 @@
     
     <div id="homepage" class="clear">
       <!-- ###### -->
-      <div id="content">   
+      <div id="content">
+		  <div id="quicklink" >
+			  <h2 style="font-style:normal">&raquo;<b>快速链接</b></h2>
+			  <ul>
+				  <volist name="result_quick" id ="Res">
+					  <li><a href="{$Res['content']}" target="_Blank">&raquo; {$Res['title']}</a></li>
+				  </volist>
+			  </ul>
+
+		  </div>
       <volist name="result4" id ="res">
         <div id="quicklinks" >
 	          <h2 style="font-style:normal">&raquo;<b>{$res['title']}</b>
