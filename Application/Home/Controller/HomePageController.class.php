@@ -41,9 +41,9 @@ class HomePageController extends Controller {
         import("ORG.Util.Page");//导入分页助手类
         $id = intval($_GET['type_id']);
         $sql=M('home_page');
-        $whereP['type_id']=$id;
+        $where_list['type_id']=$id;
         
-        $total = $sql->where($whereP)->count();
+        $total = $sql->where($where_list)->count();
         $num_per_page = 10;
         $page = new Page($total,$num_per_page);
          
@@ -51,7 +51,7 @@ class HomePageController extends Controller {
         $show = $page->show();
          
         $PageContent=$sql
-        ->where($whereP)
+        ->where($where_list)
         ->limit("$page->firstRow,$page->listRows")
         ->order("addtime desc")
         ->select();
