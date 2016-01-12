@@ -147,13 +147,19 @@
 	width:310px;
 	height:240px;
 	margin:0 0 0 16px;
-}
+	}
+#container #homepage #content #quicklink li a{
+	font-size:14px;
+ 	}
+#container #homepage #content #quicklinks li a{
+	font-size:15px;
+	}
 #container #homepage #content #quicklink li{
 	display:block;
 	float:left;
 	width:155px;
 	margin:0 0 8px 0;
-}
+	}
 
 #container #homepage #content #quicklinks img{
 	margin:8px 0 0 0;
