@@ -64,12 +64,18 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* ----------------------------------------------Generalise-------------------------------------*/
 
-#header, #container, #footer, #copyright{
+#header, #footer, #copyright{
 	position:relative;
 	margin:0 auto 0;
 	display:block;
 	width:960px;
 	}
+#container{
+	position:relative;
+	margin:0 0 0 125px;
+	display:block;
+	width:960px;
+}
 
 /* ----------------------------------------------Header-------------------------------------*/
 

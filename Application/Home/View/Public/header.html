@@ -48,11 +48,43 @@
         width:105px;
         z-index:9999; /* z-index的值设置成高点，就会顶在上层了，不会盖住了。 */
     }
-
+    /*悬浮窗设置*/
+    #suspension {
+        border: ridge;
+        width: 150px;
+        height: 300px;
+        position: fixed;
+        margin: 5px 0 0 1115px;
+        z-index:9999;
+        font-size: 18px;
+        background-color:#F4F4F4;
+        color: #510000;
+    }
+    #suspension .first_line{
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+        background-color:#CCCCCC;
+        text-align: center;
+    }
+    #suspension .first_line span{
+        display: block;
+        padding: 14px 0 0 0;
+    }
+    #suspension .sec_line{
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+        background-color:#E1D6CB;
+        text-align: center;
+    }
+    #suspension .sec_line span{
+        display: block;
+        padding: 14px 0 0 0;
+    }
 </style>
 </head>
 <body id="top">
-
 <div class="wrapper row1">
   <div id="header" class="clear">
     <div class="fl_left">
