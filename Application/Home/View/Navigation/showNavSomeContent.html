@@ -4,9 +4,9 @@
   <div id="container" class="clear">
     <!-- ####################################################################################################### -->
     <div id="left_column" >
-      <div class="holder" style="margin:20px 0 0 -25px">
+      <div class="holder" style="margin:20px 0 0 -25px;width:150px">
         <h2 class="title" style="font-style:normal"><b>{$Title1['title']}&nbsp;&nbsp;&raquo;</b></h2>
-        <ul class="nostart" style="margin-left:50px;font-size:16px">
+        <ul class="nostart" style="margin-left:20px;font-size:16px">
           <volist name="Title" id="t">
           	  <li><a href="__APP__/Home/nav/?type_id={$t['type_id']}&news_id={$t['news_id']}">&raquo;{$t['title']}</a></li>
           </volist>
@@ -14,7 +14,7 @@
       </div>
     </div>
     <!-- ############ -->
-    <div id="content" style="width:750px;margin:20px -100px 0 45px">
+    <div id="content" style="width:830px;margin:20px -100px 0 -35px">
       <h1 class="title" style="font-style:normal;" align="center"><b> {$PageContent['title']}</b></h1>
       <p align="center">发布时间:{$PageContent['addtime']}</p>
       <p>{$PageContent['content']||htmlspecialchars_decode=###}
