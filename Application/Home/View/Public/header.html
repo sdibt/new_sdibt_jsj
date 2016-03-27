@@ -50,11 +50,12 @@
     }
     /*悬浮窗设置*/
     #suspension {
-        border: ridge;
-        width: 130px;
-        height: 300px;
+        border: 1px solid #EAEAEA;
+		box-shadow: 0 0 4px rgba(0,0,0,.14);
+        width: 133px;
+        height: 312px;
         position: fixed;
-        /*margin: 100px 0 0 0;*/
+        margin: 2% 0 0 0.8%;
          left:10px;
         z-index:9999;
         background-color:#F4F4F4;
@@ -64,24 +65,38 @@
         width: 130px;
         height: 50px;
         font-size: 16px;
-        background-color:#CCCCCC;
+        display: block;
+		border: 1px solid #fff;
+		border-bottom-color: #edecec;
+    	background: #FBFBFB;
         text-align: center;
     }
     #suspension .first_line span{
         display: block;
         padding: 14px 0 0 0;
     }
-    #suspension .sec_line{
+	#suspension .first_line span a{
+		color:#4467a7;
+    }
+    
+	#suspension .over_first_line{
         width: 130px;
         height: 50px;
         font-size: 16px;
-        background-color:#E1D6CB;
+        display: block;
+		border: 1px solid #fff;
+		border-bottom-color: #edecec;
+    	background: #4467a7;
         text-align: center;
     }
-    #suspension .sec_line span{
+    #suspension .over_first_line span{
         display: block;
         padding: 14px 0 0 0;
     }
+	#suspension .over_first_line span a{
+		color:#ffffff;
+    }
+
 </style>
 </head>
 <body id="top">
