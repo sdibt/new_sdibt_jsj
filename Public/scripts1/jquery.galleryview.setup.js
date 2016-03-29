@@ -3,7 +3,7 @@ $(document).ready(function () {
         show_panels: true,              //BOOLEAN - flag to show or hide panel portion of gallery
         show_filmstrip: true,           //BOOLEAN - flag to show or hide filmstrip portion of gallery
         
-		panel_width: 410,               //INT - width of gallery panel (in pixels)
+		panel_width: 410,                //INT - width of gallery panel (in pixels)
         panel_height: 250,              //INT - height of gallery panel (in pixels)
         
 		frame_width: 64,               //INT - width of filmstrip frames (in pixels)
