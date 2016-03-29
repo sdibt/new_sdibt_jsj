@@ -1,5 +1,6 @@
 <include file="Public:header" />
 
+<div class="wrapper row3">
 <div id="suspension">
 	<div class="first_line" onmouseover="this.className='over_first_line'"  onmouseout="this.className='first_line'">
 		<span><a href="" target="_Blank">● 省级重点学科</a></span><br/>
@@ -21,8 +22,6 @@
 	</div>
 
 </div>
-
-<div class="wrapper row3">
   <div id="hpage_featured" class="clear">
     <div id="featured_slide">
       <ul>
@@ -42,7 +41,7 @@
       <div class="popular"><br/><br/><br/>
         <h2 style="font-style:normal">&raquo;<b>学院新闻</b>
           <a href="__APP__/Home/page/?type_id=1">
-          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 185px"/>
+          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 285px"/>
           </a></h2>
           <ul>
           <volist name="result2" id ="Res">
@@ -59,15 +58,28 @@
           </ul>
       </div>
     </div>
-	    <div class="intro clear">	    
-	      <div class="popular"><br/><br/><br/>
+  </div>
+  <div id="link" >
+      <div style="margin:4px 0 0 8px;width:168px;height:34px;background:#510000;color:#ffffff;font-size:16px;text-align:center;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius: 6px; padding:12px 0 0 0">
+         <b>快速链接&nbsp;&nbsp;&nbsp;<span style="font-size:1px">link</span></b>
+      </div>
+			  <ul style="line-height: 1.8em;font-size:14px">
+				  <volist name="result_quick" id ="Res">
+					  <li><a href="{$Res['content']}" target="_Blank">{$Res['title']}</a></li>
+				  </volist>
+			  </ul>
+
+		  </div>
+	<div id="container" class="clear" style="width:980px; margin:0 0 0 300px">
+    <div id="homepage" class="clear" style="width:820px">
+      <!-- ###### -->
+      <div id="content">  
+	      <div id="quicklinks" style="margin:0 20px 0 4px">
 	        <h2 style="font-style:normal">&raquo;<b>学院通知</b>
 	          <a href="__APP__/Home/page/?type_id=2">
-	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 185px"/>
+	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 285px"/>
 	          </a></h2> 
 	          <ul>
-				<div id="scroll_div" class="conter" style="overflow:hidden;height:250px;float:left;">
-    				<div id="scroll_begin" style="float:left;"> 
 	       			   <volist name="result5" id ="Res">
 		        	     <li>
 		           		   <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">
@@ -77,33 +89,14 @@
 					 	   {$title}&hellip;</a>
 		              	   <span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
 		           		 </li>
-					  </volist>	
- 					</div>
-   				 <div id="scroll_end" style="float:left;"></div>
-				</div> 
+					  </volist>	 
 	          </ul>
-	      </div>
-	    </div>
-  </div>
-	<div id="container" class="clear">
-    
-    <div id="homepage" class="clear">
-      <!-- ###### -->
-      <div id="content">
-		  <div id="quicklink" >
-			  <h2 style="font-style:normal">&raquo;<b>快速链接</b></h2>
-			  <ul>
-				  <volist name="result_quick" id ="Res">
-					  <li><a href="{$Res['content']}" target="_Blank">&raquo; <B>{$Res['title']}</B></a></li>
-				  </volist>
-			  </ul>
-
-		  </div>
+	      </div>	
       <volist name="result4" id ="res">
-        <div id="quicklinks" >
+        <div id="quicklinks" style="margin:0 20px 0 4px">
 	          <h2 style="font-style:normal">&raquo;<b>{$res['title']}</b>
 	          <a href="__APP__/Home/page/?type_id={$res['news_id']}">
-	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 195px;"/></a></h2>
+	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 295px;"/></a></h2>
 	          <ul>
 	          <volist name="result3[$res['news_id']]" id ="Res">
 	            <li>
