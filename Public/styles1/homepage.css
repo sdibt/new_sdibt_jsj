@@ -3,8 +3,8 @@
 	position:relative;
 	margin:0 auto 0;
 	display:block;
-	width:980px;
-	padding-bottom:0px;
+	width:875px;
+	margin:0 0 0 315px;
 	}
 
 #hpage_featured a{
@@ -15,9 +15,9 @@
 #hpage_featured .intro{
 	display:block;
 	float:left;
-	width:300px;
+	width:385px;
 	line-height:0.6em;
-	margin:-10px 0 0 15px;
+	margin:-10px 0 0 20px;
 	}
 
 #hpage_featured .intro h1, #hpage_featured .intro h2, #hpage_featured .intro h3, #hpage_featured .intro h4, #hpage_featured .intro h5, #hpage_featured .intro h6{
@@ -59,7 +59,7 @@
 #hpage_featured .popular li{
 	display:block;
 	float:right;
-	width:290px;
+	width:385px;
 	margin-bottom:0px;
 	}
 #copyright .lists li{
@@ -137,14 +137,14 @@
 #container #homepage #content #quicklinks{
 	display:block;
 	float:left;
-	width:310px;
+	width:390px;
 	height:240px;
 	margin:0 0 0 16px;
 	}
 #container #homepage #content #quicklink{
 	display:block;
 	float:left;
-	width:310px;
+	width:410px;
 	height:240px;
 	margin:0 0 0 16px;
 	}
