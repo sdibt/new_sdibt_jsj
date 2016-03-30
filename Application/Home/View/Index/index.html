@@ -1,6 +1,7 @@
 <include file="Public:header" />
 
 <div class="wrapper row3">
+<div id="showpage">
 <div id="suspension">
 	<div class="first_line" onmouseover="this.className='over_first_line'"  onmouseout="this.className='first_line'">
 		<span><a href="" target="_Blank">● 省级重点学科</a></span><br/>
@@ -41,7 +42,7 @@
       <div class="popular"><br/><br/><br/>
         <h2 style="font-style:normal">&raquo;<b>学院新闻</b>
           <a href="__APP__/Home/page/?type_id=1">
-          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 285px"/>
+          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 265px"/>
           </a></h2>
           <ul>
           <volist name="result2" id ="Res">
@@ -70,14 +71,14 @@
 			  </ul>
 
 		  </div>
-	<div id="container" class="clear" style="width:980px; margin:0 0 0 300px">
+	<div id="container" class="clear" style="width:980px; margin:0 0 0 140px">
     <div id="homepage" class="clear" style="width:820px">
       <!-- ###### -->
       <div id="content">  
 	      <div id="quicklinks" style="margin:0 20px 0 4px">
 	        <h2 style="font-style:normal">&raquo;<b>学院通知</b>
 	          <a href="__APP__/Home/page/?type_id=2">
-	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 285px"/>
+	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 275px"/>
 	          </a></h2> 
 	          <ul>
 	       			   <volist name="result5" id ="Res">
@@ -96,7 +97,7 @@
         <div id="quicklinks" style="margin:0 20px 0 4px">
 	          <h2 style="font-style:normal">&raquo;<b>{$res['title']}</b>
 	          <a href="__APP__/Home/page/?type_id={$res['news_id']}">
-	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 295px;"/></a></h2>
+	          <img src="__PUBLIC__/image/more2.gif" style="width:30px;height:20px; margin:0 0 -10px 275px;"/></a></h2>
 	          <ul>
 	          <volist name="result3[$res['news_id']]" id ="Res">
 	            <li>
@@ -114,6 +115,7 @@
 	  </volist>
     </div>
    </div>
+  </div>
   </div>
 </div>
 <!-- 滚动广告的控制 -->
