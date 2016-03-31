@@ -278,7 +278,14 @@ public function showAddSet(){
     }
     public function updSetJudge(){
         header("content-type:text/html;charset=utf-8");
-    
+        $sql = M('news_main');
+        $where['type_id'] = 0;
+        $where['news_id'] = intval($_POST['id1']);
+        $ret=$sql->where($where)->select();
+        if (!empty($ret)){
+            $url = $url= U('Home/Navigation/updSet');;
+            $this->error('已经存在此id',$url,5);
+        }  
         $id = intval($_POST['id']);
         $time = Date('Y-m-d H:i:s');
         $textinfo['type_id']= 0;
@@ -288,7 +295,9 @@ public function showAddSet(){
         $textinfo['count']= 0;
     
         D('Main')->upd(0,$id,$textinfo);
-         
+        $save_where['type_id'] = $id;
+        $save_data['type_id'] = intval($_POST['id1']);
+        $sql->where($save_where)->save($save_data);
         echo "<script>alert('修改成功!');
               location.href='showSet';</script>";
     }

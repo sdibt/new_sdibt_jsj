@@ -291,7 +291,7 @@ public function showAddSet(){
         $textinfo['addtime']= $time;
         $textinfo['seecount']= 0;
     
-        D('HomePage')->upd(0,$id,$textinfo); 
+        D('HomePage')->upd(0,$id,$textinfo);  
         $save_where['type_id'] = $id;
         $save_data['type_id'] = intval($_POST['id1']);
         $sql->where($save_where)->save($save_data);
