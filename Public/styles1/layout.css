@@ -19,7 +19,7 @@ body{
 	font-size:13px;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	color:#979797;
-	background-color:#333333;
+	background-color:#E1D6CB;
 	}
 
 img{margin:0; padding:0; border:none;}
@@ -336,7 +336,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 #copyright{
 	padding:15px 0;
-	border-top:1px solid #979797;
+	border-top:1px solid #E1D6CB;
 	}
 
 #copyright p{
@@ -345,6 +345,6 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	}
 
 #copyright, #copyright a{
-	color:#979797;
-	background-color:#333333;
+	color:#000000;
+	background-color:#E1D6CB;
 	}
