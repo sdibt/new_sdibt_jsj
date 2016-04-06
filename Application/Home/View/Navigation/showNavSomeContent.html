@@ -5,16 +5,16 @@
     <!-- ####################################################################################################### -->
     <div id="left_column" style="line-height:2.6em;">
       <div class="holder" style="margin:20px 0 0 -25px;width:150px">
-        <h2 class="title" style="font-style:normal"><b>{$Title1['title']}&nbsp;&nbsp;&raquo;</b></h2>
-        <ul id="show_menu" class="nostart" style="margin-left:20px;font-size:19px">
+        <h2 class="title" style="font-style:normal;font-size:19px"><b>{$Title1['title']}&nbsp;&nbsp;&raquo;</b></h2>
+        <ul id="show_menu" class="nostart" style="margin-left:20px;font-size:16px">
           <volist name="Title" id="t">
-          	  <li><a href="__APP__/Home/nav/?type_id={$t['type_id']}&news_id={$t['news_id']}">&raquo;{$t['title']}</a></li>
+          	  <li><a href="__APP__/Home/nav/?type_id={$t['type_id']}&news_id={$t['news_id']}">{$t['title']}</a></li>
           </volist>
         </ul>
       </div>
     </div>
     <!-- ############ -->
-    <div id="content" style="width:830px;margin:20px -100px 0 -35px">
+    <div id="content" style="width:830px;margin:21px -100px 0 -35px">
       <h1 class="title" style="font-style:normal;" align="center"><b> {$PageContent['title']}</b></h1>
       <p align="center">发布时间:{$PageContent['addtime']}</p>
       <p>{$PageContent['content']||htmlspecialchars_decode=###}
