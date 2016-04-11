@@ -12,7 +12,7 @@ border:1px solid #fff;
 border-width:1px 1px 0 0;
 background:#c9c9a7; 
 line-height:40px; 
-font-size:12px;
+font-size:16px;
 }
 
 .menu ul li ul {
@@ -47,7 +47,6 @@ z-index:9999; /* z-index的值设置成高点，就会顶在上层了，不会�
 		border: 1px solid #fff;
 		border-bottom-color: #edecec;
     	background: #FBFBFB;
-        text-align: center;
     }
     #suspension .first_line span{
         display: block;
@@ -66,7 +65,6 @@ z-index:9999; /* z-index的值设置成高点，就会顶在上层了，不会�
 		border: 1px solid #fff;
 		border-bottom-color: #edecec;
     	background: #4467a7;
-        text-align: center;
     }
     #suspension .over_first_line span{
         display: block;

@@ -22,21 +22,12 @@
 <div class="wrapper row1">
   <div id="header" class="clear">
     <div class="fl_left">
-      <img src="__PUBLIC__/image/logo2.png" alt="" style = "width:80px;height:80px;margin:10px 0 0 0"/>
-    	<img src="__PUBLIC__/image/jsjlogo.png" alt=""  style = "width:600px;height:80px;margin:0 0 0 -10px"/>
+    	<img src="__PUBLIC__/image/jsj.jpg" alt=""  style = "width:1027px;height:235px;margin:-25px 0 -46px -30px"/>
     </div>
-    <div class="fl_right">
-      <form action="__APP__/Home/Search/showSearch" method="post" id="sitesearch">
-        <fieldset>
-          <legend>Site Search</legend>
-          <input type="text" name ="val" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
-          <input type="image" src="__PUBLIC__/images1/search.gif" id="search" alt="Search" />
-        </fieldset>
-      </form>
-    </div>
+
     <div id="topnav" class = "menu">
       <ul>
-        <li class="active navlist"><a href="__APP__">首页</a></li>
+        <li class="active navlist"><a href="/">首页</a></li>
         	<volist name="result" id="res">
 		        <li class="navlist"><a href="__APP__/Home/nav/?type_id={$res['news_id']}&news_id={$result1[$res['news_id']][0]['news_id']}">{$res['title']}</a>
 		        <ul>
