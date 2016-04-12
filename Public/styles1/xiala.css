@@ -79,7 +79,7 @@ z-index:9999; /* z-index的值设置成高点，就会顶在上层了，不会�
         border: 3px solid #EAEAEA;
 		box-shadow: 0 0 5px rgba(0,0,0,.14);
         width: 183px;
-        height: 450px;
+        height: 405px;
     	float:left;
         color: #510000;
     	margin:30px 10px 0 0;
