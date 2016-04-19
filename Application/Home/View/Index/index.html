@@ -4,22 +4,22 @@
 <div id="showpage">
 <div id="suspension">
 	<div class="first_line" onmouseover="this.className='over_first_line'"  onmouseout="this.className='first_line'">
-		<span><a href="" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 省级重点学科</a></span><br/>
+		<span><a href="./Home/nav/?type_id=3&news_id=6" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 省级重点学科</a></span><br/>
 	</div>
 	<div class="first_line" onmouseover="this.className='over_first_line'"  onmouseout="this.className='first_line'">
-		<span><a href="" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 省级教学团队</a></span><br/>
+		<span><a href="./Home/nav/?type_id=2&news_id=5" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 省级教学团队</a></span><br/>
 	</div>
 	<div class="first_line" onmouseover="this.className='over_first_line'"  onmouseout="this.className='first_line'">
-		<span><a href="" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 省级精品课程</a></span><br/>
+		<span><a href="./Home/nav/?type_id=2&news_id=6" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 省级精品课程</a></span><br/>
 	</div>
 	<div class="first_line" onmouseover="this.className='over_first_line'"  onmouseout="this.className='first_line'">
-		<span><a href="" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 省级重点实验室</a></span><br/>
+		<span><a href="./Home/nav/?type_id=3&news_id=7" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 省级重点实验室</a></span><br/>
 	</div>
 	<div class="first_line" onmouseover="this.className='over_first_line'"  onmouseout="this.className='first_line'">
-		<span><a href="" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 国家级精品课程</a></span><br/>
+		<span><a href="./Home/nav/?type_id=2&news_id=6" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 国家级精品课程</a></span><br/>
 	</div>
 	<div class="first_line" onmouseover="this.className='over_first_line'"  onmouseout="this.className='first_line'">
-		<span><a href="" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 国家级特色专业</a></span><br/>
+		<span><a href="./Home/nav/?type_id=2&news_id=4" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● 国家级特色专业</a></span><br/>
 	</div>
 
 </div>
@@ -49,7 +49,7 @@
 	            <li>
 	              <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">
 	              <?php
-		              $title=mb_substr($Res['title'],0,12,'utf-8');
+		              $title=mb_substr($Res['title'],0,18,'utf-8');
 				  ?>
 					  {$title}&hellip;
 				  </a><span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
@@ -85,7 +85,7 @@
 		        	     <li>
 		           		   <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">
 		            		  <?php
-		             		       $title=mb_substr($Res['title'],0,12,'utf-8');
+		             		       $title=mb_substr($Res['title'],0,16,'utf-8');
 					 		  ?>
 					 	   {$title}&hellip;</a>
 		              	   <span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
@@ -103,7 +103,7 @@
 	            <li>
 	              <p><a href="__APP__/Home/con/?type_id={$Res['type_id']}&news_id={$Res['news_id']}">
 					  <?php
-		           	       $title=mb_substr($Res['title'],0,15,'utf-8');
+		           	       $title=mb_substr($Res['title'],0,18,'utf-8');
 					  ?>
 					  {$title}&hellip;
 				  </a><span style="float:right">{$Res['addtime']|substr=0,10}</span></p>
