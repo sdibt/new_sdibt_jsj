@@ -59,14 +59,14 @@ class IndexController extends Controller {
         }
         $this->assign('result5',$Result5);
 
-        //学院通知
+        //快速链接
         $where['type_id'] = 3;
         $result_quick = $sql->where($where)->order('addtime desc')->select();
         $cnt=0;
         foreach ($result_quick as $val){
             $Result_quick[$cnt]=$val;
             $cnt++;
-            if($cnt==10)
+            if($cnt==11)
                 break;
         }
         $this->assign('result_quick',$Result_quick);
